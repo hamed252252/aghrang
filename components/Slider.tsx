@@ -7,7 +7,7 @@ import image4 from "@/public/assets/slider/4.svg";
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import mask from "@/public/mask.svg";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -33,7 +33,7 @@ import {
 
 const Slider = () => {
     return (
-        <div className="hidden md:block">
+        <div className="hidden md:block ">
             <Swiper
                 cssMode={true}
                 loop
@@ -48,7 +48,7 @@ const Slider = () => {
                     Mousewheel,
                     Keyboard,
                 ]}
-                className="mySwiper  "
+                className="mySwiper bg-mask  "
             >
                 <SwiperSlide>
                     <Image

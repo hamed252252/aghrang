@@ -69,6 +69,9 @@ const config = {
                         "hsl(var(--card-foreground))",
                 },
             },
+            backgroundImage: {
+                mask: "url(/mask.svg)",
+            },
             borderRadius: {
                 lg: "var(--radius)",
                 md: "calc(var(--radius) - 2px)",

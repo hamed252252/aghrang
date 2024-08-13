@@ -192,29 +192,70 @@ export const ContentItem = ({
                     />
                 </div>
             </BlurFade>
-            <div className="font-iransans ">
-                <div className="flex  items-center  gap-3">
+            <div className="font-iransans">
+                <div className="flex items-center gap-3">
                     <span className="text-2xl text-red-500">
                         کاربرد محصولات
                     </span>
                     <div className="w-16 h-1 bg-slate-400"></div>
                 </div>
-                <div className="grid col-end-1 md:grid-cols-3 md:row-span-2">
-                    <div className="flex justify-center items-center flex-col relative">
-                        <Image
-                            src={paint}
-                            alt="image"
-                        />
-                        <div className="bg-slate-200 w-full text-start text-xl opacity-85 absolute bottom-0 font-bold p-4 text-black">
-                            رنگ و پوشش
-                        </div>
-                    </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {productCategories.map(
+                        (category, index) => (
+                            <div
+                                key={index}
+                                className="relative flex flex-col items-center justify-center transition-transform transform ease-out duration-300 hover:scale-105"
+                            >
+                                <Image
+                                    src={category.src}
+                                    alt={category.alt}
+                                    layout="responsive"
+                                    width={500}
+                                    height={500}
+                                />
+                                <div className="absolute bottom-0 w-full p-4 text-xl font-bold text-black bg-slate-200 opacity-85 text-start">
+                                    {category.label}
+                                </div>
+                            </div>
+                        )
+                    )}
                 </div>
             </div>
         </div>
     );
 };
-
+const productCategories = [
+    {
+        src: paint,
+        alt: "image",
+        label: "رنگ و پوشش",
+    },
+    {
+        src: chemical,
+        alt: "image",
+        label: "شیمی ساختمان",
+    },
+    {
+        src: printing,
+        alt: "image",
+        label: "صنعت چاپ و بسته بندی",
+    },
+    {
+        src: wood,
+        alt: "image",
+        label: "صنایع چوبی",
+    },
+    {
+        src: texttile,
+        alt: "image",
+        label: "صنعت نساجی",
+    },
+    {
+        src: adtive,
+        alt: "image",
+        label: "ادتیو ها",
+    },
+];
 export type Production = {
     icon: any;
     name: string;
