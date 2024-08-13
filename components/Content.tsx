@@ -25,6 +25,12 @@ import Icon2 from "@/public/assets/ProductionIcons/icon2.png";
 import Icon3 from "@/public/assets/ProductionIcons/icon3.png";
 import Icon4 from "@/public/assets/ProductionIcons/icon4.png";
 import Icon5 from "@/public/assets/ProductionIcons/icon5.png";
+import paint from "@/public/assets/color.jpg";
+import chemical from "@/public/assets/chemical.jpg";
+import printing from "@/public/assets/printing.jpg";
+import wood from "@/public/assets/wood-indutry.jpg";
+import texttile from "@/public/assets/textile-industry.jpg";
+import adtive from "@/public/assets/additive.jpg";
 
 gsap.registerPlugin(
     useGSAP,
@@ -186,6 +192,25 @@ export const ContentItem = ({
                     />
                 </div>
             </BlurFade>
+            <div className="font-iransans ">
+                <div className="flex  items-center  gap-3">
+                    <span className="text-2xl text-red-500">
+                        کاربرد محصولات
+                    </span>
+                    <div className="w-16 h-1 bg-slate-400"></div>
+                </div>
+                <div className="grid col-end-1 md:grid-cols-3 md:row-span-2">
+                    <div className="flex justify-center items-center flex-col relative">
+                        <Image
+                            src={paint}
+                            alt="image"
+                        />
+                        <div className="bg-slate-200 w-full text-start text-xl opacity-85 absolute bottom-0 font-bold p-4 text-black">
+                            رنگ و پوشش
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

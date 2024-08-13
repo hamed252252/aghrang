@@ -3,13 +3,27 @@ import { Compass, LucideAArrowDown } from "lucide-react";
 import React from "react";
 import ack from "@/public/aboutUs.svg";
 import Image from "next/image";
-const page = () => {
+import CourseRankTemplateRTL from "@/components/CourseRankTemplateRTL";
+import { AppProps } from "next/app";
+interface CourseSection {
+    title: string;
+    description: string;
+    gradient: string;
+    icon?: JSX.Element; // Optional icon prop
+}
+
+interface CourseRankTemplateProps {
+    mainTitle: string;
+    searchPlaceholder: string;
+    sections: CourseSection[];
+}
+const page = ({ Component, pageProps }: AppProps) => {
     return (
         <>
             <div className="w-full h-24 bg-gradient-to-r bg-primary  flex justify-center items-center text-4xl font-bold text-primary-foreground font-iransans ">
                 درباره ی ما
             </div>
-            <div className="w-full flex-col md:flex-row justify-center items-center  gap-4 flex mt-10 text-nowrap">
+            <div className="w-full flex-col md:flex-row justify-center items-center font-iransans gap-4 flex mt-10 text-nowrap">
                 <div className="w-48 h-48 bg-primary text-primary-foreground text-center hover:bg-primary hover:text-foreground flex justify-center items-center rounded-md hover:-translate-y-2 ease-in-out transition-all">
                     <div>
                         <div>

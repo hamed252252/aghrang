@@ -72,17 +72,46 @@ const Menus = () => {
                         dir="rtl"
                         className=" "
                     >
-                        <NavigationMenu className="bg-transparent group-hover:bg-white: w-full">
+                        <NavigationMenu
+                            skipDelayDuration={2000}
+                            className="bg-transparent group-hover:bg-white: w-full"
+                        >
                             <NavigationMenuList className="gap-2 text-nowrap">
                                 <NavigationMenuItem className="w-full  group-hover:bg-transparent  hover:text-primary-foreground">
-                                    <div className="flex justify-center items-center">
+                                    <div className=" justify-center flex w-full max-w-sm items-center space-x-2">
                                         <Input
                                             type="search"
                                             placeholder=" 🔍جستجو کنید"
-                                            className="w-46 placeholder:text-black  placeholder:text-right group-hover:placeholder:text-black"
+                                            className="w-46 placeholder:text-black  placeholder:text-start  group-hover:placeholder:text-black"
                                         ></Input>
+                                        <Button
+                                            type="submit"
+                                            className="group-hover:bg-white group-hover:text-black"
+                                        >
+                                            جستجو کنید
+                                        </Button>
                                     </div>
                                 </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <NavigationMenuTrigger className="bg-transparent group-hover:bg-transparent hover:text-primary-foreground">
+                                        چند رسانه ای
+                                    </NavigationMenuTrigger>
+                                    <NavigationMenuContent className="group-hover:bg-transparent  flex justify-end space-x-6  mx-auto w-full items-end hover:text-primary-foreground">
+                                        <div className="p-4 flex justify-end space-x-6  mx-auto w-full items-end">
+                                            <Button>
+                                                حضور
+                                                نمایشگاهی
+                                            </Button>
+                                            <Button>
+                                                گالری تصاویر
+                                            </Button>
+                                            <Button>
+                                                گالری ویدو
+                                            </Button>
+                                        </div>
+                                    </NavigationMenuContent>
+                                </NavigationMenuItem>
+
                                 <NavigationMenuItem className="group-hover:bg-transparent  hover:text-primary-foreground">
                                     <NavigationMenuTrigger
                                         className="bg-transparent group-hover:bg-transparent
@@ -144,7 +173,7 @@ const Menus = () => {
                                                                 href={
                                                                     product.href
                                                                 }
-                                                                className="text-gray-700 hover:text-green-600"
+                                                                className="text-primary hover:text-green-900"
                                                             >
                                                                 {
                                                                     product.name
@@ -188,7 +217,7 @@ const Menus = () => {
                                     <NavigationMenuContent>
                                         {/* list  */}
 
-                                        <ul className="flex justify-center p-8 space-x-6 h-[70vh] w-[97vw] gap-x-6  rtl:space-x-reverse ">
+                                        <ul className="flex justify-center p-8 space-x-6 h-[70vh] w-[97vw] gap-x-6 text-primary  rtl:space-x-reverse ">
                                             {utilities.map(
                                                 (
                                                     utility
@@ -203,7 +232,7 @@ const Menus = () => {
                                                             href={
                                                                 utility.href
                                                             }
-                                                            className="text-gray-700 hover:text-green-600"
+                                                            className="text-primary hover:text-green-900"
                                                         >
                                                             {
                                                                 utility.name
@@ -239,28 +268,17 @@ const Menus = () => {
                                         </ul>
                                     </NavigationMenuContent>
                                 </NavigationMenuItem>
-                                <NavigationMenuItem>
-                                    <NavigationMenuTrigger className="bg-transparent group-hover:bg-transparent  hover:text-primary-foreground">
-                                        چند رسانه ای
-                                    </NavigationMenuTrigger>
-                                    <NavigationMenuContent className="group-hover:bg-transparent hover:text-primary-foreground">
-                                        <div className="  p-4 flex justify-center mr-5 space-x-6  items-center">
-                                            <Button>
-                                                حضور
-                                                نمایشگاهی
-                                            </Button>
-                                            <Button>
-                                                گالری تصاویر
-                                            </Button>
-                                            <Button>
-                                                گالری ویدو
-                                            </Button>
-                                        </div>
-                                    </NavigationMenuContent>
-                                </NavigationMenuItem>
+
                                 <NavigationMenuItem>
                                     <Link href={"/faq"}>
                                         سوالات متداول
+                                    </Link>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <Link
+                                        href={"/customers"}
+                                    >
+                                        مشتریان
                                     </Link>
                                 </NavigationMenuItem>
                             </NavigationMenuList>
