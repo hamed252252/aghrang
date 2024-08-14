@@ -67,3 +67,7 @@
         @apply bg-background text-foreground;
     }
 }
+.disclosure-panel {
+    transition: max-height 0.5s ease-in-out,
+        opacity 0.5s ease-in-out;
+}

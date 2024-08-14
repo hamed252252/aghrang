@@ -70,7 +70,7 @@ const config = {
                 },
             },
             backgroundImage: {
-                mask: "url(/mask.svg)",
+                "mask-svg": "url('/mask.svg')",
             },
             borderRadius: {
                 lg: "var(--radius)",

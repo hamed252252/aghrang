@@ -33,7 +33,7 @@ import {
 
 const Slider = () => {
     return (
-        <div className="hidden md:block ">
+        <div className="hidden md:block  bg-mask-svg ">
             <Swiper
                 cssMode={true}
                 loop

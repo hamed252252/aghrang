@@ -281,6 +281,11 @@ const Menus = () => {
                                         مشتریان
                                     </Link>
                                 </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <Link href={"/chart"}>
+                                        چارت سازمانی
+                                    </Link>
+                                </NavigationMenuItem>
                             </NavigationMenuList>
                         </NavigationMenu>
                     </div>
@@ -508,9 +513,16 @@ const Menus = () => {
                                     </AccordionItem>
                                     <a
                                         href="/contactus"
-                                        className="text-md hover:text-green-500 ease-out duration-300 transition-all"
+                                        className="text-md my-2 hover:text-green-500 ease-out duration-300 transition-all"
                                     >
                                         تماس به ما
+                                    </a>
+                                    <br />
+                                    <a
+                                        href="/chart"
+                                        className="text-md hover:text-green-500 ease-out duration-300 transition-all"
+                                    >
+                                        چارت سازمانی
                                     </a>
                                 </Accordion>
                             </div>
