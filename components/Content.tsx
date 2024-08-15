@@ -192,6 +192,7 @@ export const ContentItem = ({
                     />
                 </div>
             </BlurFade>
+            (
             <div className="font-iransans">
                 <div className="flex items-center gap-3">
                     <span className="text-2xl text-red-500">
@@ -199,31 +200,49 @@ export const ContentItem = ({
                     </span>
                     <div className="w-16 h-1 bg-slate-400"></div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {productCategories.map(
-                        (category, index) => (
-                            <div
-                                key={index}
-                                className="relative flex flex-col items-center justify-center transition-transform transform ease-out duration-300 hover:scale-105"
-                            >
-                                <Image
-                                    src={category.src}
-                                    alt={category.alt}
-                                    layout="responsive"
-                                    width={500}
-                                    height={500}
-                                />
-                                <div className="absolute bottom-0 w-full p-4 text-xl font-bold text-black bg-slate-200 opacity-85 text-start">
-                                    {category.label}
-                                </div>
-                            </div>
-                        )
-                    )}
+                <div className="mt-6 space-y-6">
+                    {[0, 1].map((row) => (
+                        <div
+                            key={row}
+                            className="flex gap-x-6"
+                        >
+                            {productCategories
+                                .slice(row * 3, row * 3 + 3)
+                                .map((category, index) => (
+                                    <div
+                                        key={index}
+                                        className="relative flex-1 flex flex-col items-center justify-center overflow-hidden transition-all duration-300 transform hover:flex-grow-[1.2] hover:scale-x-102"
+                                    >
+                                        <Image
+                                            src={
+                                                category.src
+                                            }
+                                            alt={
+                                                category.alt
+                                            }
+                                            layout="responsive"
+                                            width={500}
+                                            height={500}
+                                            className="rounded-lg"
+                                        />
+                                        <div className="absolute bottom-0 w-full p-4 text-xl font-bold text-black bg-slate-200 opacity-85 text-start">
+                                            {category.label}
+                                        </div>
+                                    </div>
+                                ))}
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
     );
 };
+
+interface CardProps {
+    image: string;
+    title: string;
+}
+
 const productCategories = [
     {
         src: paint,
@@ -256,6 +275,12 @@ const productCategories = [
         label: "ادتیو ها",
     },
 ];
+interface CardProps {
+    image: string;
+    alt: string;
+    label: string;
+}
+
 export type Production = {
     icon: any;
     name: string;
