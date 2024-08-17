@@ -11,7 +11,9 @@ import PulsatingButton from "@/components/ui/pulsating-button";
 export default function Home() {
     return (
         <main>
-            <Slider />
+            <div className="mx-auto  p-4">
+                <Slider />
+            </div>
 
             <Content />
         </main>

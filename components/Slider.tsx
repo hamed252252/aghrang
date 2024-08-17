@@ -1,45 +1,30 @@
 "use client";
 import Image from "next/image";
-import image1 from "@/public/assets/slider/1.svg";
-import image2 from "@/public/assets/slider/2.svg";
-import image3 from "@/public/assets/slider/3.svg";
-import image4 from "@/public/assets/slider/4.svg";
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import mask from "@/public/mask.svg";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-import "./styles.css";
-import vector from "@/public/assets/slider/Vector 1.svg";
-// import required modules
 import {
     Navigation,
     Pagination,
     Mousewheel,
     Keyboard,
 } from "swiper/modules";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel";
+
+import image1 from "@/public/assets/slider/1.svg";
+import image2 from "@/public/assets/slider/2.svg";
+import image3 from "@/public/assets/slider/3.svg";
+import image4 from "@/public/assets/slider/4.svg";
 
 const Slider = () => {
     return (
-        <div className="hidden md:block  bg-mask-svg ">
+        <div className="md:block hidden w-full h-[70vh] ">
             <Swiper
                 cssMode={true}
-                loop
+                loop={true}
                 navigation={true}
-                style={{ backgroundImage: vector.src }}
-                pagination={true}
+                pagination={{ clickable: true }}
                 mousewheel={true}
                 keyboard={true}
                 modules={[
@@ -48,32 +33,33 @@ const Slider = () => {
                     Mousewheel,
                     Keyboard,
                 ]}
-                className="mySwiper bg-mask  "
+                className="w-full h-full"
             >
-                <SwiperSlide>
-                    <Image
-                        src={image1}
-                        alt="image1"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src={image2}
-                        alt="image2"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src={image3}
-                        alt="image3"
-                    />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        src={image4}
-                        alt="image4"
-                    />
-                </SwiperSlide>
+                <div
+                    style={{
+                        backgroundImage: 'url("/mask.svg")',
+                    }}
+                >
+                    {[image1, image2, image3, image4].map(
+                        (image, index) => (
+                            <SwiperSlide
+                                key={index}
+                                className="flex justify-center items-center"
+                            >
+                                <div className="relative w-full h-full">
+                                    <Image
+                                        src={image}
+                                        alt={`Slide ${
+                                            index + 1
+                                        }`}
+                                        layout="fill"
+                                        className="object-cover w-full h-full"
+                                    />
+                                </div>
+                            </SwiperSlide>
+                        )
+                    )}
+                </div>
             </Swiper>
         </div>
     );

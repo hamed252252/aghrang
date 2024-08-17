@@ -169,7 +169,7 @@ const Menus = () => {
                                                             }
                                                             className="group relative"
                                                         >
-                                                            <a
+                                                            <Link
                                                                 href={
                                                                     product.href
                                                                 }
@@ -178,7 +178,7 @@ const Menus = () => {
                                                                 {
                                                                     product.name
                                                                 }
-                                                            </a>
+                                                            </Link>
                                                             <ul className="absolute hidden  p-8 group-hover:block bg-white  mt-2">
                                                                 {product.subProducts.map(
                                                                     (
@@ -189,7 +189,7 @@ const Menus = () => {
                                                                                 subProduct.name
                                                                             }
                                                                         >
-                                                                            <a
+                                                                            <Link
                                                                                 href={
                                                                                     subProduct.href
                                                                                 }
@@ -198,7 +198,7 @@ const Menus = () => {
                                                                                 {
                                                                                     subProduct.name
                                                                                 }
-                                                                            </a>
+                                                                            </Link>
                                                                         </li>
                                                                     )
                                                                 )}
@@ -210,6 +210,7 @@ const Menus = () => {
                                         </div>
                                     </NavigationMenuContent>
                                 </NavigationMenuItem>
+
                                 <NavigationMenuItem className="w-full">
                                     <NavigationMenuTrigger className="bg-transparent group-hover:bg-transparent  hover:text-primary-foreground">
                                         کاربرد محصولات
@@ -228,7 +229,7 @@ const Menus = () => {
                                                         }
                                                         className="group w-full h-full relative"
                                                     >
-                                                        <a
+                                                        <Link
                                                             href={
                                                                 utility.href
                                                             }
@@ -237,7 +238,7 @@ const Menus = () => {
                                                             {
                                                                 utility.name
                                                             }
-                                                        </a>
+                                                        </Link>
                                                         <ul className="absolute hidden transition-opacity opacity-100 group-hover:block bg-white mt-2">
                                                             {utility.subUtilities.map(
                                                                 (
@@ -248,7 +249,7 @@ const Menus = () => {
                                                                             subUtility.name
                                                                         }
                                                                     >
-                                                                        <a
+                                                                        <Link
                                                                             href={
                                                                                 subUtility.href
                                                                             }
@@ -257,7 +258,7 @@ const Menus = () => {
                                                                             {
                                                                                 subUtility.name
                                                                             }
-                                                                        </a>
+                                                                        </Link>
                                                                     </li>
                                                                 )
                                                             )}
@@ -284,6 +285,14 @@ const Menus = () => {
                                 <NavigationMenuItem>
                                     <Link href={"/chart"}>
                                         چارت سازمانی
+                                    </Link>
+                                </NavigationMenuItem>
+                                <NavigationMenuItem>
+                                    <Link
+                                        href="/blog"
+                                        className="text-md hover:text-green-500 ease-out duration-300 transition-all"
+                                    >
+                                        بلاگ
                                     </Link>
                                 </NavigationMenuItem>
                             </NavigationMenuList>
@@ -347,7 +356,7 @@ const Menus = () => {
                                                         item,
                                                         index
                                                     ) => (
-                                                        <a
+                                                        <Link
                                                             key={
                                                                 index
                                                             }
@@ -359,7 +368,7 @@ const Menus = () => {
                                                             {
                                                                 item.text
                                                             }
-                                                        </a>
+                                                        </Link>
                                                     )
                                                 )}
                                             </div>
@@ -399,7 +408,7 @@ const Menus = () => {
                                                                                 subItem,
                                                                                 subIndex
                                                                             ) => (
-                                                                                <a
+                                                                                <Link
                                                                                     key={
                                                                                         subIndex
                                                                                     }
@@ -411,7 +420,7 @@ const Menus = () => {
                                                                                     {
                                                                                         subItem.name
                                                                                     }
-                                                                                </a>
+                                                                                </Link>
                                                                             )
                                                                         )}
                                                                     </div>
@@ -457,7 +466,7 @@ const Menus = () => {
                                                                                 subItem,
                                                                                 subIndex
                                                                             ) => (
-                                                                                <a
+                                                                                <Link
                                                                                     key={
                                                                                         subIndex
                                                                                     }
@@ -469,7 +478,7 @@ const Menus = () => {
                                                                                     {
                                                                                         subItem.name
                                                                                     }
-                                                                                </a>
+                                                                                </Link>
                                                                             )
                                                                         )}
                                                                     </div>
@@ -493,7 +502,7 @@ const Menus = () => {
                                                         item,
                                                         index
                                                     ) => (
-                                                        <a
+                                                        <Link
                                                             key={
                                                                 index
                                                             }
@@ -505,25 +514,36 @@ const Menus = () => {
                                                             {
                                                                 item.name
                                                             }
-                                                        </a>
+                                                        </Link>
                                                     )
                                                 )}
                                             </div>
                                         </AccordionContent>
                                     </AccordionItem>
-                                    <a
-                                        href="/contactus"
-                                        className="text-md my-2 hover:text-green-500 ease-out duration-300 transition-all"
-                                    >
-                                        تماس به ما
-                                    </a>
-                                    <br />
-                                    <a
-                                        href="/chart"
-                                        className="text-md hover:text-green-500 ease-out duration-300 transition-all"
-                                    >
-                                        چارت سازمانی
-                                    </a>
+                                    <div className="my-2">
+                                        <Link
+                                            href="/contactus"
+                                            className="text-md  hover:text-green-500 ease-out duration-300 transition-all"
+                                        >
+                                            تماس به ما
+                                        </Link>
+                                    </div>
+                                    <div className="my-2">
+                                        <Link
+                                            href="/chart"
+                                            className="text-md hover:text-green-500 ease-out duration-300 transition-all"
+                                        >
+                                            چارت سازمانی
+                                        </Link>
+                                    </div>
+                                    <div>
+                                        <Link
+                                            href="/blog"
+                                            className="text-md hover:text-green-500 ease-out duration-300 transition-all"
+                                        >
+                                            بلاگ
+                                        </Link>
+                                    </div>
                                 </Accordion>
                             </div>
                         </DrawerContent>
