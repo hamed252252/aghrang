@@ -154,7 +154,13 @@ const Menus = () => {
                                     
                                     hover:text-primary-foreground"
                                     >
-                                        محصولات
+                                        <Link
+                                            href={
+                                                "/products"
+                                            }
+                                        >
+                                            محصولات
+                                        </Link>
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent>
                                         <div className="flex justify-center p-4 space-x-6 h-[70vh] w-[97vw] gap-x-6  ">

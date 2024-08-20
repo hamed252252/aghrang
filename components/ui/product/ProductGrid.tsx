@@ -1,8 +1,15 @@
 // components/ProductGrid.tsx
 import React from "react";
 import ProductCard from "./ProductCard";
-
-const ProductGrid: React.FC = () => {
+import { cn } from "@/lib/utils";
+interface ProductGridProps {
+    filter: string;
+    setfilter: React.Dispatch<React.SetStateAction<string>>;
+}
+const ProductGrid: React.FC<ProductGridProps> = ({
+    filter,
+    setfilter,
+}) => {
     const products = [
         {
             image: "https://via.placeholder.com/300x400.png?text=Product+1",
@@ -38,7 +45,7 @@ const ProductGrid: React.FC = () => {
     ];
 
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className={cn("grid gap-x-4", filter)}>
             {products.map((product, index) => (
                 <ProductCard
                     key={index}

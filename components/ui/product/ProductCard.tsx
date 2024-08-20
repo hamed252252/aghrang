@@ -1,15 +1,14 @@
-// components/ProductCard.tsx
 import React from "react";
+import { Eye, ShoppingCart, Scale } from "lucide-react";
 
-type ProductCardProps = {
+interface ProductCardProps {
     image: string;
     title: string;
     description: string;
     originalPrice: string;
     discountedPrice: string;
-    discount?: string;
     onSale?: boolean;
-};
+}
 
 const ProductCard: React.FC<ProductCardProps> = ({
     image,
@@ -17,49 +16,48 @@ const ProductCard: React.FC<ProductCardProps> = ({
     description,
     originalPrice,
     discountedPrice,
-    discount,
     onSale,
 }) => {
     return (
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all duration-500 hover:shadow-2xl hover:scale-105 hover:-rotate-2">
-            <div className="relative group transform transition-transform duration-500 hover:rotate-1 hover:translate-y-1">
+        <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+            <div className="relative">
                 <img
                     src={image}
                     alt={title}
-                    className="w-full h-auto transform transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-72 object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-500 group-hover:bg-opacity-50"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform group-hover:translate-y-0 translate-y-10">
-                    <span className="bg-white text-black px-4 py-2 text-sm rounded-lg shadow-lg">
-                        View Details
-                    </span>
+                <div className="absolute inset-0 flex justify-center items-center gap-x-4 bg-gray-800 bg-opacity-50 opacity-0 hover:opacity-100 ease-in duration-500 transition-opacity">
+                    <div className="bg-white p-3 rounded-full shadow-md hover:bg-slate-400 transition-all ease-in duration-300">
+                        <Scale className="w-6 h-6 text-gray-800" />
+                    </div>
+                    <div className="bg-white p-3 rounded-full shadow-md hover:bg-slate-400 transition-all ease-in duration-300">
+                        <Eye className="w-6 h-6 text-gray-800" />
+                    </div>
+                    <div className="bg-white p-3 rounded-full shadow-md hover:bg-slate-400 transition-all ease-in duration-300">
+                        <ShoppingCart className="w-6 h-6 text-gray-800" />
+                    </div>
                 </div>
-                {discount && (
-                    <span className="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 text-xs rounded-lg shadow-lg">
-                        {discount}
-                    </span>
-                )}
-                {onSale && (
-                    <span className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 text-xs rounded-lg shadow-lg">
-                        Sale
-                    </span>
-                )}
             </div>
-            <div className="p-4 transform transition-transform duration-500 group-hover:translate-y-1">
-                <h3 className="text-lg font-semibold text-gray-900">
+            <div className="p-4">
+                <h3 className="text-xl font-bold">
                     {title}
                 </h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-gray-600 text-sm">
                     {description}
                 </p>
                 <div className="flex items-center mt-2">
-                    <span className="text-gray-500 line-through mr-2">
-                        ${originalPrice}
+                    <span className="text-gray-400 line-through mr-2">
+                        {originalPrice}
                     </span>
                     <span className="text-indigo-600 font-bold">
-                        ${discountedPrice}
+                        {discountedPrice}
                     </span>
                 </div>
+                {onSale && (
+                    <span className="text-green-500 font-bold">
+                        On Sale!
+                    </span>
+                )}
             </div>
         </div>
     );
