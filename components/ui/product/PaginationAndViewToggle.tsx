@@ -1,11 +1,12 @@
+import { FilterAction } from "@/app/products/page";
 import React from "react";
 import { FaTh, FaList } from "react-icons/fa"; // Icons for grid and list views
 interface PaginationAndViewToggleProps {
-    setFilter: React.Dispatch<React.SetStateAction<string>>;
+    dispatch: React.Dispatch<FilterAction>;
 }
 const PaginationAndViewToggle: React.FC<
     PaginationAndViewToggleProps
-> = ({ setFilter }) => {
+> = ({ dispatch }) => {
     return (
         <div className="flex justify-between gap-x-3 items-center mt-4">
             <div className="text-gray-700">
@@ -24,7 +25,10 @@ const PaginationAndViewToggle: React.FC<
                     <button
                         className="p-2 bg-gray-200 rounded  hover:bg-gray-300 "
                         onClick={() =>
-                            setFilter("grid-cols-1")
+                            dispatch({
+                                type: "SET_LIST",
+                                payload: "grid-cols-1",
+                            })
                         }
                     >
                         <FaList />
@@ -32,7 +36,10 @@ const PaginationAndViewToggle: React.FC<
                     <button
                         className="p-2 bg-gray-200 rounded hover:bg-gray-300"
                         onClick={() =>
-                            setFilter("grid-cols-4")
+                            dispatch({
+                                type: "SET_GRID",
+                                payload: "grid-cols-4",
+                            })
                         }
                     >
                         <FaTh />

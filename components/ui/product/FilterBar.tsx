@@ -1,9 +1,10 @@
+import { FilterAction } from "@/app/products/page";
 import React from "react";
 interface FilterBarProps {
-    setfilter: React.Dispatch<React.SetStateAction<string>>;
+    dispatch: React.Dispatch<FilterAction>;
 }
 const FilterBar: React.FC<FilterBarProps> = ({
-    setfilter,
+    dispatch,
 }) => {
     return (
         <div className="relative inline-block text-right">

@@ -1,24 +1,53 @@
 "use client";
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import FilterBar from "@/components/ui/product/FilterBar";
 import PaginationAndViewToggle from "@/components/ui/product/PaginationAndViewToggle";
 import ProductGrid from "@/components/ui/product/ProductGrid";
 
+export type FilterAction =
+    | { type: "SET_GRID"; payload: string }
+    | { type: "SET_LIST"; payload: string };
+
+// تعریف نوع حالت
+interface FilterState {
+    filter: string;
+}
+
+// تعریف ریدوسر
+function filterReducer(
+    state: FilterState,
+    action: FilterAction
+): FilterState {
+    switch (action.type) {
+        case "SET_GRID":
+            return { ...state, filter: action.payload };
+        case "SET_LIST":
+            return { ...state, filter: action.payload };
+        default:
+            throw new Error("Unknown action type");
+    }
+}
+
+const initialState: FilterState = {
+    filter: "grid-cols-4",
+};
 const Page: React.FC = () => {
-    const [filter, setFilter] =
-        useState<string>("grid-cols-4");
+    const [state, dispatch] = useReducer(
+        filterReducer,
+        initialState
+    );
 
     return (
         <div className="container mx-auto p-4 font-iransans">
             <div className="flex justify-between items-center my-10 space-x-3">
-                <FilterBar setfilter={setFilter} />
+                <FilterBar dispatch={dispatch} />
                 <PaginationAndViewToggle
-                    setFilter={setFilter}
+                    dispatch={dispatch}
                 />
             </div>
             <ProductGrid
-                setfilter={setFilter}
-                filter={filter}
+                dispatch={dispatch}
+                filter={state.filter}
             />
         </div>
     );

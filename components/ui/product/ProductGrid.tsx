@@ -2,13 +2,14 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 import { cn } from "@/lib/utils";
+import { FilterAction } from "@/app/products/page";
 interface ProductGridProps {
     filter: string;
-    setfilter: React.Dispatch<React.SetStateAction<string>>;
+    dispatch: React.Dispatch<FilterAction>;
 }
 const ProductGrid: React.FC<ProductGridProps> = ({
     filter,
-    setfilter,
+    dispatch,
 }) => {
     const products = [
         {
