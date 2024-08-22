@@ -46,7 +46,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({
     ];
 
     return (
-        <div className={cn("grid gap-4 w-full ", filter)}>
+        <div className={cn("grid  w-full ", filter)}>
             {products.map((product, index) => (
                 <ProductCard
                     filter={filter}
