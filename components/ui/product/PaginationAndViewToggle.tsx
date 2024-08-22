@@ -8,7 +8,7 @@ const PaginationAndViewToggle: React.FC<
     PaginationAndViewToggleProps
 > = ({ dispatch }) => {
     return (
-        <div className="flex justify-between gap-x-3 items-center mt-4">
+        <div className="flex justify-center  gap-x-3 items-center  mt-4">
             <div className="text-gray-700">
                 نمایش محصولات 1 تا 24 از 200 نتیجه
             </div>
