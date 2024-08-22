@@ -113,32 +113,9 @@ const Menus = () => {
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem className="group-hover:bg-transparent  hover:text-primary-foreground">
-                                    <NavigationMenuTrigger
-                                        className="bg-transparent group-hover:bg-transparent
-                                    
-                                    hover:text-primary-foreground"
-                                    >
-                                        <Link
-                                            href={
-                                                "/aboutus"
-                                            }
-                                        >
-                                            درباره ی ما
-                                        </Link>
-                                    </NavigationMenuTrigger>
-                                    <NavigationMenuContent className="flex justify-center items-center px-4 p-2 gap-x-4 ">
-                                        <Button>
-                                            آشنایی با آق رنگ
-                                        </Button>
-                                        <Button>
-                                            {" "}
-                                            گواهینامه‌و مجوز
-                                            ها
-                                        </Button>
-                                        <Button>
-                                            تقدیرنامه‌ها
-                                        </Button>
-                                    </NavigationMenuContent>
+                                    <Link href={"/aboutus"}>
+                                        درباره ی ما
+                                    </Link>
                                 </NavigationMenuItem>
                                 <NavigationMenuItem>
                                     <Link
@@ -352,33 +329,13 @@ const Menus = () => {
                                     collapsible
                                 >
                                     <AccordionItem value="about-us">
-                                        <AccordionTrigger>
+                                        <Link
+                                            href={
+                                                "/aboutus"
+                                            }
+                                        >
                                             درباره ی ما
-                                        </AccordionTrigger>
-                                        <AccordionContent>
-                                            <div className="flex flex-col p-4 justify-center items-center">
-                                                {aboutUsMenuItems.map(
-                                                    (
-                                                        item,
-                                                        index
-                                                    ) => (
-                                                        <Link
-                                                            key={
-                                                                index
-                                                            }
-                                                            href={
-                                                                item.link
-                                                            }
-                                                            className="w-full h-fit hover:text-green-500 transition-all ease-in-out duration-300"
-                                                        >
-                                                            {
-                                                                item.text
-                                                            }
-                                                        </Link>
-                                                    )
-                                                )}
-                                            </div>
-                                        </AccordionContent>
+                                        </Link>
                                     </AccordionItem>
 
                                     <AccordionItem value="utilities">

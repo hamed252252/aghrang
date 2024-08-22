@@ -1,5 +1,6 @@
 import React from "react";
 import { Eye, ShoppingCart, Scale } from "lucide-react";
+import Image from "next/image";
 
 interface ProductCardProps {
     image: string;
@@ -34,16 +35,16 @@ const ProductCard: React.FC<ProductCardProps> = ({
         </div>
     );
 
-    return filter === "grid-cols-1" ? (
+    return filter === "grid-rows-1" ? (
         <div
             dir="rtl"
-            className="flex items-center bg-white shadow-lg rounded-lg w-[80vw] h-[45vh] mx-auto my-4 relative overflow-hidden"
+            className="flex items-center bg-white shadow-lg rounded-lg w-[60vw] h-[45vh] mx-auto my-4 relative overflow-hidden"
         >
             <div className="flex-shrink-0 w-1/3 relative">
                 <img
                     src={image}
                     alt={title}
-                    className="w-full h-auto object-cover rounded-r-lg"
+                    className="h-full w-full object-cover rounded-r-lg"
                 />
                 {renderOverlayIcons()}
             </div>
@@ -70,7 +71,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             </div>
         </div>
     ) : (
-        <div className="max-w-sm rounded-lg overflow-hidden mx-auto shadow-lg bg-white my-4 relative">
+        <div className="max-w-sm md:w-96 rounded-lg overflow-hidden mx-auto shadow-lg bg-white my-4 relative">
             <div className="relative">
                 <img
                     src={image}

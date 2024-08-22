@@ -1,12 +1,13 @@
-// components/ProductGrid.tsx
 import React from "react";
 import ProductCard from "./ProductCard";
 import { cn } from "@/lib/utils";
 import { FilterAction } from "@/app/products/page";
+
 interface ProductGridProps {
     filter: string;
     dispatch: React.Dispatch<FilterAction>;
 }
+
 const ProductGrid: React.FC<ProductGridProps> = ({
     filter,
     dispatch,
@@ -46,15 +47,39 @@ const ProductGrid: React.FC<ProductGridProps> = ({
     ];
 
     return (
-        <div className={cn("grid  w-full ", filter)}>
-            {products.map((product, index) => (
-                <ProductCard
-                    filter={filter}
-                    key={index}
-                    {...product}
-                />
-            ))}
-        </div>
+        <>
+            {filter === "grid-rows-1" ? (
+                <div
+                    className={cn(
+                        "grid gap-4 p-4", // Common styles
+                        "grid-cols-1 grid-rows-1" // Single row grid for specific filter
+                    )}
+                >
+                    {products.map((product, index) => (
+                        <ProductCard
+                            filter={filter}
+                            key={index}
+                            {...product}
+                        />
+                    ))}
+                </div>
+            ) : (
+                <div
+                    className={cn(
+                        "grid gap-4 p-4", // Common styles
+                        "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" // Responsive grid columns
+                    )}
+                >
+                    {products.map((product, index) => (
+                        <ProductCard
+                            filter={filter}
+                            key={index}
+                            {...product}
+                        />
+                    ))}
+                </div>
+            )}
+        </>
     );
 };
 

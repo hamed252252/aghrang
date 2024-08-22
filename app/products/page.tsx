@@ -39,7 +39,7 @@ const Page: React.FC = () => {
 
     return (
         <div className=" mx-auto p-4 font-iransans">
-            <div className="flex justify-between items-center px-48 my-10 space-x-3">
+            <div className="flex justify-between items-center container  my-10 space-x-3">
                 <FilterBar dispatch={dispatch} />
                 <PaginationAndViewToggle
                     dispatch={dispatch}
