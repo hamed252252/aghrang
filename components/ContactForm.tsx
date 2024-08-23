@@ -60,7 +60,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen py-12 px-4 bg-gray-50 font-iransans animate-fadeIn">
+        <div className="flex flex-col items-center justify-center min-h-screen py-12 px-4 bg-gradient-to-b from-slate-200 to-violet-400 font-iransans animate-fadeIn">
             <div className="bg-white border border-gray-200 shadow-2xl rounded-2xl w-full max-w-4xl p-10 flex flex-col lg:flex-row lg:gap-16 transform transition-all hover:shadow-3xl animate-slideUp">
                 <div className="w-full lg:w-2/3">
                     <h2 className="text-3xl font-bold mb-8 text-gray-800 animate-fadeInSlow">
