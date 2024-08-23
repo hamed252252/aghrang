@@ -64,6 +64,7 @@ import { title } from "process";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import WordPullUp from "./magicui/word-pull-up";
+import { TextEffect } from "./TextEffect";
 
 const Content = () => {
     useGSAP(() => {
@@ -120,7 +121,9 @@ export const ContentItem = ({
 
                 {/* <BlurFade delay={1.5}>
                     </BlurFade> */}
-                {text}
+                <TextEffect preset="scale">
+                    {text}
+                </TextEffect>
 
                 <Link
                     href={"/aboutus"}
