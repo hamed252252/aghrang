@@ -230,14 +230,17 @@ const ContactForm: React.FC<ContactFormProps> = ({
                         اطلاعات تماس
                     </h3>
                     <div className="mb-6 flex items-start">
-                        <MapPin className="w-6 h-6 text-blue-600 ml-3" />
+                        <MapPin className="w-8 h-8 text-blue-600 ml-3" />
                         <p className="text-gray-700">
                             {address}
                         </p>
                     </div>
                     <div className="mb-6 flex items-start">
                         <Phone className="w-6 h-6 text-blue-600 ml-3" />
-                        <p className="text-gray-700">
+                        <p
+                            dir="ltr"
+                            className="text-gray-700"
+                        >
                             {phone}
                         </p>
                     </div>
