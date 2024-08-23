@@ -1,6 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
+import gsap from "gsap";
 
 type ContactFormProps = {
     nameLabel?: string;
@@ -59,18 +60,42 @@ const ContactForm: React.FC<ContactFormProps> = ({
         }
     };
 
+    const formRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (formRef.current) {
+            gsap.fromTo(
+                formRef.current.children,
+                {
+                    opacity: 0,
+                    y: 100,
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.4,
+                    ease: "power3.inOut",
+                    stagger: 0.2,
+                }
+            );
+        }
+    }, []);
+
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen py-12 px-4 bg-gradient-to-b from-slate-200 to-violet-400 font-iransans animate-fadeIn">
-            <div className="bg-white border border-gray-200 shadow-2xl rounded-2xl w-full max-w-4xl p-10 flex flex-col lg:flex-row lg:gap-16 transform transition-all hover:shadow-3xl animate-slideUp">
+        <div
+            ref={formRef}
+            className="flex flex-col items-center justify-center min-h-screen py-12 px-4 bg-gradient-to-b from-slate-200 to-violet-400 font-iransans"
+        >
+            <div className="bg-white border border-gray-200 shadow-2xl rounded-2xl w-full max-w-4xl p-10 flex flex-col lg:flex-row lg:gap-16 transform transition-all hover:shadow-3xl">
                 <div className="w-full lg:w-2/3">
-                    <h2 className="text-3xl font-bold mb-8 text-gray-800 animate-fadeInSlow">
+                    <h2 className="text-3xl font-bold mb-8 text-gray-800">
                         ارسال پیام به ما
                     </h2>
                     <form
                         className="grid grid-cols-1 lg:grid-cols-2 gap-6"
                         onSubmit={handleSubmit}
                     >
-                        <div className="animate-fadeInSlow">
+                        <div>
                             <label className="block text-sm font-semibold text-gray-700">
                                 {nameLabel}
                             </label>
@@ -97,7 +122,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                                 </span>
                             )}
                         </div>
-                        <div className="animate-fadeInSlow">
+                        <div>
                             <label className="block text-sm font-semibold text-gray-700">
                                 {emailLabel}
                             </label>
@@ -124,7 +149,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                                 </span>
                             )}
                         </div>
-                        <div className="animate-fadeInSlow">
+                        <div>
                             <label className="block text-sm font-semibold text-gray-700">
                                 {phoneLabel}
                             </label>
@@ -151,7 +176,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                                 </span>
                             )}
                         </div>
-                        <div className="animate-fadeInSlow">
+                        <div>
                             <label className="block text-sm font-semibold text-gray-700">
                                 {companyLabel}
                             </label>
@@ -169,7 +194,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                                 className="mt-2 p-3 border border-gray-300 rounded-lg w-full focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             />
                         </div>
-                        <div className="lg:col-span-2 animate-fadeInSlow">
+                        <div className="lg:col-span-2">
                             <label className="block text-sm font-semibold text-gray-700">
                                 {messageLabel}
                             </label>
@@ -195,34 +220,34 @@ const ContactForm: React.FC<ContactFormProps> = ({
                                 </span>
                             )}
                         </div>
-                        <button className="mt-8 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transform transition-all duration-300 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 lg:col-span-2 animate-bounceIn">
+                        <button className="mt-8 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transform transition-all duration-300 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 lg:col-span-2">
                             ارسال پیام
                         </button>
                     </form>
                 </div>
-                <div className="w-full lg:w-1/3 mt-12 lg:mt-0 animate-slideUp">
-                    <h3 className="text-2xl font-semibold mb-8 text-gray-800 animate-fadeInSlow">
+                <div className="w-full lg:w-1/3 mt-12 lg:mt-0">
+                    <h3 className="text-2xl font-semibold mb-8 text-gray-800">
                         اطلاعات تماس
                     </h3>
-                    <div className="mb-6 flex items-start animate-fadeInSlow">
+                    <div className="mb-6 flex items-start">
                         <MapPin className="w-6 h-6 text-blue-600 ml-3" />
                         <p className="text-gray-700">
                             {address}
                         </p>
                     </div>
-                    <div className="mb-6 flex items-start animate-fadeInSlow">
+                    <div className="mb-6 flex items-start">
                         <Phone className="w-6 h-6 text-blue-600 ml-3" />
                         <p className="text-gray-700">
                             {phone}
                         </p>
                     </div>
-                    <div className="mb-6 flex items-start animate-fadeInSlow">
+                    <div className="mb-6 flex items-start">
                         <Mail className="w-6 h-6 text-blue-600 ml-3" />
                         <p className="text-gray-700">
                             {email}
                         </p>
                     </div>
-                    <p className="text-gray-600 animate-fadeInSlow">
+                    <p className="text-gray-600">
                         {extraInfo}
                     </p>
                 </div>
