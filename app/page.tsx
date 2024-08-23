@@ -1,5 +1,4 @@
 import Content from "@/components/Content";
-import BlurFade from "@/components/magicui/blur-fade";
 import { MagicCard } from "@/components/magicui/magic-card";
 import Menus from "@/components/menus";
 

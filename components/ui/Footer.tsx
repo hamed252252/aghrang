@@ -112,7 +112,7 @@ const UtilityComponentItems = ({ link, name }: Utility) => {
 const Footer = () => {
     return (
         <>
-            <div className="flex font-iransans  mt-10 bg-gradient-to-r from-green-200 to-green-100 rounded  w-full ">
+            <div className="flex font-iransans   bg-gradient-to-r from-green-200 to-green-100 rounded  w-full ">
                 <div className="flex flex-col p-10 justify-center md:gap-x-32 items-stretch mx-auto   md:flex-row w-full">
                     <div className="flex flex-col  ">
                         <Section title="اطلاعات تماس">

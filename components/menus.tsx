@@ -537,7 +537,6 @@ import {
 } from "react-icons/fa"; // Example icons from react-icons
 import { DropdownMenuIcon } from "@radix-ui/react-icons";
 import { useGSAP } from "@gsap/react";
-import BlurFade from "./magicui/blur-fade";
 import BlurIn from "./magicui/blur-in";
 import {
     NavigationMenuLink,

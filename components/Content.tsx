@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import BlurFade from "./magicui/blur-fade";
 import PulsatingButton from "./ui/pulsating-button";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -119,7 +118,9 @@ export const ContentItem = ({
                     words={companyName}
                 ></WordPullUp>
 
-                <BlurFade delay={1.5}>{text}</BlurFade>
+                {/* <BlurFade delay={1.5}>
+                    </BlurFade> */}
+                {text}
 
                 <Link
                     href={"/aboutus"}
@@ -131,69 +132,60 @@ export const ContentItem = ({
                     ></WordPullUp>
                 </Link>
             </div>
-            <BlurFade delay={2}>
-                <div
-                    dir="ltr"
-                    className="grid grid-cols-1   md:grid-cols-3 md:grid-rows-2 text-center p-4 gap-10 mx-auto"
-                >
-                    <ProductionItem
-                        icon={Icon3}
-                        href={ProductionItems[2].href}
-                        name={ProductionItems[2].name}
-                        className={
-                            ProductionItems[2].className
-                        }
-                        desctiption={
-                            ProductionItems[2].desctiption
-                        }
-                    />
-                    <ProductionItem
-                        icon={Icon2}
-                        href={ProductionItems[1].href}
-                        name={ProductionItems[1].name}
-                        className={
-                            ProductionItems[1].className
-                        }
-                        desctiption={
-                            ProductionItems[1].desctiption
-                        }
-                    />
-                    <ProductionItem
-                        icon={Icon1}
-                        href={ProductionItems[0].href}
-                        name={ProductionItems[0].name}
-                        className={`${ProductionItems[0].className}  md:row-span-2 
-                        `}
-                        desctiption={
-                            ProductionItems[0].desctiption
-                        }
-                    />
-                    <ProductionItem
-                        icon={Icon5}
-                        href={ProductionItems[4].href}
-                        name={ProductionItems[4].name}
-                        className={
-                            ProductionItems[4].className
-                        }
-                        desctiption={
-                            ProductionItems[4].desctiption
-                        }
-                    />
-                    <ProductionItem
-                        icon={Icon4}
-                        href={ProductionItems[3].href}
-                        name={ProductionItems[3].name}
-                        className={
-                            ProductionItems[3].className
-                        }
-                        desctiption={
-                            ProductionItems[3].desctiption
-                        }
-                    />
-                </div>
-            </BlurFade>
 
-            <div className="font-iransans">
+            <div
+                dir="ltr"
+                className="grid grid-cols-1   md:grid-cols-3 md:grid-rows-2 text-center p-4 gap-10 mx-auto"
+            >
+                <ProductionItem
+                    icon={Icon3}
+                    href={ProductionItems[2].href}
+                    name={ProductionItems[2].name}
+                    className={ProductionItems[2].className}
+                    desctiption={
+                        ProductionItems[2].desctiption
+                    }
+                />
+                <ProductionItem
+                    icon={Icon2}
+                    href={ProductionItems[1].href}
+                    name={ProductionItems[1].name}
+                    className={ProductionItems[1].className}
+                    desctiption={
+                        ProductionItems[1].desctiption
+                    }
+                />
+                <ProductionItem
+                    icon={Icon1}
+                    href={ProductionItems[0].href}
+                    name={ProductionItems[0].name}
+                    className={`${ProductionItems[0].className}  md:row-span-2 
+                        `}
+                    desctiption={
+                        ProductionItems[0].desctiption
+                    }
+                />
+                <ProductionItem
+                    icon={Icon5}
+                    href={ProductionItems[4].href}
+                    name={ProductionItems[4].name}
+                    className={ProductionItems[4].className}
+                    desctiption={
+                        ProductionItems[4].desctiption
+                    }
+                />
+                <ProductionItem
+                    icon={Icon4}
+                    href={ProductionItems[3].href}
+                    name={ProductionItems[3].name}
+                    className={ProductionItems[3].className}
+                    desctiption={
+                        ProductionItems[3].desctiption
+                    }
+                />
+            </div>
+
+            <div className="font-iransans my-10">
                 <div className="flex items-center gap-3">
                     <span className="text-2xl text-red-500">
                         کاربرد محصولات
