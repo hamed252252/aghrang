@@ -9,9 +9,6 @@ const PaginationAndViewToggle: React.FC<
 > = ({ dispatch }) => {
     return (
         <div className="flex justify-center   gap-x-3 items-center  mt-4">
-            <div className="text-gray-700">
-                نمایش محصولات 1 تا 24 از 200 نتیجه
-            </div>
             <div className="flex items-center space-x-4 rtl:space-x-reverse ">
                 <div className="flex space-x-1 rtl:space-x-reverse border  ">
                     {/* Pagination indicators - adjust colors and sizes as needed */}

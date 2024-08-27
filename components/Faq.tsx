@@ -42,7 +42,7 @@ const Faq: NextPage = () => {
     };
 
     return (
-        <div className="max-w-4xl mx-auto p-6 sm:p-8 lg:p-10 text-right font-iransans bg-gradient-to-b from-purple-50 to-white dark:from-gray-900 dark:to-gray-800 rounded-lg shadow-md">
+        <div className="max-w-7xl mx-auto p-6 sm:p-8 lg:p-24  my-4 text-right font-iransans bg-gradient-to-b from-purple-50 to-white dark:from-gray-900 dark:to-gray-800 rounded-lg shadow-md">
             <motion.h1
                 className="text-4xl font-extrabold mb-10 text-purple-700 dark:text-purple-300"
                 initial={{ opacity: 0, y: -20 }}

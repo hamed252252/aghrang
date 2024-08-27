@@ -71,12 +71,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
             </div>
         </div>
     ) : (
-        <div className="max-w-sm md:w-96 rounded-lg overflow-hidden mx-auto shadow-lg bg-white my-4 relative">
+        <div className="  rounded-lg overflow-hidden mx-auto shadow-lg bg-white my-4 relative">
             <div className="relative">
                 <img
                     src={image}
                     alt={title}
-                    className="w-full h-72 object-cover"
+                    className="w-full h-[62vh] object-cover"
                 />
                 {renderOverlayIcons()}
             </div>

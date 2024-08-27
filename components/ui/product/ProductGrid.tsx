@@ -67,7 +67,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({
                 <div
                     className={cn(
                         "grid gap-4 p-4", // Common styles
-                        "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" // Responsive grid columns
+                        "grid-cols-1  md:grid-cols-2 xl:grid-cols-3  2xl:grid-cols-4" // Responsive grid columns
                     )}
                 >
                     {products.map((product, index) => (
