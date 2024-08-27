@@ -1,20 +1,20 @@
-// File path: /pages/product/Page.js
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faFacebook,
-    faTwitter,
-    faInstagram,
-    faGoogle,
-} from "@fortawesome/free-brands-svg-icons";
-
-library.add(faFacebook, faTwitter, faInstagram, faGoogle);
+    Facebook,
+    Twitter,
+    Instagram,
+    Mail,
+} from "lucide-react";
 
 import Footer from "@/components/product/Footer";
 import Header from "@/components/product/Header";
 import ProductDetails from "@/components/product/ProductDetails";
 import Sidebar from "@/components/product/Sidebar";
 import CarouselCustomIndicator from "@/components/product/CarouselMP";
+import { FaFacebook, FaGoogle } from "react-icons/fa";
+import {
+    InstagramLogoIcon,
+    TwitterLogoIcon,
+} from "@radix-ui/react-icons";
 
 export default function Page() {
     const imagePaths = [
@@ -151,28 +151,16 @@ export default function Page() {
                                 </span>
                                 <div className="flex space-x-2 mt-1">
                                     <button className="text-gray-500">
-                                        <FontAwesomeIcon
-                                            icon={
-                                                faFacebook
-                                            }
-                                        />
+                                        <FaFacebook className="w-10 h-5" />
                                     </button>
                                     <button className="text-gray-500">
-                                        <FontAwesomeIcon
-                                            icon={faTwitter}
-                                        />
+                                        <TwitterLogoIcon className="w-10 h-5" />
                                     </button>
                                     <button className="text-gray-500">
-                                        <FontAwesomeIcon
-                                            icon={
-                                                faInstagram
-                                            }
-                                        />
+                                        <InstagramLogoIcon className="w-10 h-5" />
                                     </button>
                                     <button className="text-gray-500">
-                                        <FontAwesomeIcon
-                                            icon={faGoogle}
-                                        />
+                                        <FaGoogle className="w-10 h-5" />
                                     </button>
                                 </div>
                             </div>
