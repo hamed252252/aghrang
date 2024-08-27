@@ -96,7 +96,7 @@ export default function Page() {
                             <span className="mr-2 text-gray-700">
                                 رنگ‌ها:
                             </span>
-                            <div className="flex space-x-2">
+                            <div className="flex gap-x-2">
                                 <span className="w-6 h-6 bg-red-500 rounded-full"></span>
                                 <span className="w-6 h-6 bg-blue-500 rounded-full"></span>
                                 <span className="w-6 h-6 bg-green-500 rounded-full"></span>

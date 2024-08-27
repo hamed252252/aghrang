@@ -92,47 +92,47 @@ export const utilities = [
         subUtilities: [
             {
                 name: "رنگ پلاستیک داخل ساختمان (پایه آب)",
-                href: "/colors-coatings/plastic-paint",
+                href: "/utilities/colors-coatings/plastic-paint",
             },
             {
                 name: "رنگ داخل ساختمان (اکریلیک)",
-                href: "/colors-coatings/acrylic-paint",
+                href: "/utilities/colors-coatings/acrylic-paint",
             },
             {
                 name: "پوشش نما (لاک)",
-                href: "/colors-coatings/veneer-coating",
+                href: "/utilities/colors-coatings/veneer-coating",
             },
             {
                 name: "رنگهای هنری و دکوراتیو",
-                href: "/colors-coatings/artistic-decorative-paints",
+                href: "/utilities/colors-coatings/artistic-decorative-paints",
             },
             {
                 name: "پوشش مینرال",
-                href: "/colors-coatings/mineral-coating",
+                href: "/utilities/colors-coatings/mineral-coating",
             },
             {
                 name: "پوشش گرانولیت",
-                href: "/colors-coatings/granolit-coating",
+                href: "/utilities/colors-coatings/granolit-coating",
             },
             {
                 name: "پوشش سلولزی",
-                href: "/colors-coatings/cellulosic-coating",
+                href: "/utilities/colors-coatings/cellulosic-coating",
             },
             {
                 name: "رنگ نما",
-                href: "/colors-coatings/outer-wall-paint",
+                href: "/utilities/colors-coatings/outer-wall-paint",
             },
             {
                 name: "آستری",
-                href: "/colors-coatings/primer",
+                href: "/utilities/colors-coatings/primer",
             },
             {
                 name: "مولتی کالر",
-                href: "/colors-coatings/multi-color",
+                href: "/utilities/colors-coatings/multi-color",
             },
             {
                 name: "رنگ استخری",
-                href: "/colors-coatings/pool-paint",
+                href: "/utilities/colors-coatings/pool-paint",
             },
         ],
     },
@@ -142,151 +142,151 @@ export const utilities = [
         subUtilities: [
             {
                 name: "عایق رطوبتی (عایق سفید بام)",
-                href: "/building-chemicals/waterproofing",
+                href: "/utilities/building-chemicals/waterproofing",
             },
             {
                 name: "پوشش های آب بند",
-                href: "/building-chemicals/sealing-coatings",
+                href: "/utilities/building-chemicals/sealing-coatings",
             },
             {
                 name: "خمیر درزگیر",
-                href: "/building-chemicals/joint-sealant",
+                href: "/utilities/building-chemicals/joint-sealant",
             },
             {
                 name: "ملات های ساختمانی",
-                href: "/building-chemicals/construction-mortars",
+                href: "/utilities/building-chemicals/construction-mortars",
             },
             {
                 name: "پوشش های گرانولیت",
-                href: "/building-chemicals/granolit-coatings",
+                href: "/utilities/building-chemicals/granolit-coatings",
             },
             {
                 name: "چسب بتن",
-                href: "/building-chemicals/concrete-adhesive",
+                href: "/utilities/building-chemicals/concrete-adhesive",
             },
             {
                 name: "چسب کاشی",
-                href: "/building-chemicals/tile-adhesive",
+                href: "/utilities/building-chemicals/tile-adhesive",
             },
             {
                 name: "چسب PVC و پنل های گچی",
-                href: "/building-chemicals/pvc-adhesive",
+                href: "/utilities/building-chemicals/pvc-adhesive",
             },
             {
                 name: "کفپوش",
-                href: "/building-chemicals/floor-coverings",
+                href: "/utilities/building-chemicals/floor-coverings",
             },
             {
                 name: "پد سلولزی",
-                href: "/building-chemicals/cellulose-pads",
+                href: "/utilities/building-chemicals/cellulose-pads",
             },
             {
                 name: "استحکام بتن",
-                href: "/building-chemicals/concrete-strengthening",
+                href: "/utilities/building-chemicals/concrete-strengthening",
             },
             {
                 name: "کنیتکس",
-                href: "/building-chemicals/konitex",
+                href: "/utilities/building-chemicals/konitex",
             },
         ],
     },
     {
         name: "صنعت چاپ و بسته بندی",
-        href: "/printing-packaging",
+        href: "/utilities/printing-packaging",
         subUtilities: [
             {
                 name: "مرکب چاپ",
-                href: "/printing-packaging/printing-inks",
+                href: "/utilities/printing-packaging/printing-inks",
             },
             {
                 name: "چاپ پیگمنت",
-                href: "/printing-packaging/pigment-printing",
+                href: "/utilities/printing-packaging/pigment-printing",
             },
             {
                 name: "چسب فشار حساس",
-                href: "/printing-packaging/pressure-sensitive-adhesives",
+                href: "/utilities/printing-packaging/pressure-sensitive-adhesives",
             },
             {
                 name: "چسب سلفون",
-                href: "/printing-packaging/selvage-adhesive",
+                href: "/utilities/printing-packaging/selvage-adhesive",
             },
             {
                 name: "چسب صحافی",
-                href: "/printing-packaging/binding-adhesive",
+                href: "/utilities/printing-packaging/binding-adhesive",
             },
             {
                 name: "تکمیل منسوجات بی بافت",
-                href: "/printing-packaging/nonwoven-textile-finishing",
+                href: "/utilities/printing-packaging/nonwoven-textile-finishing",
             },
             {
                 name: "چسب بوم نقاشی",
-                href: "/printing-packaging/canvas-adhesive",
+                href: "/utilities/printing-packaging/canvas-adhesive",
             },
             {
                 name: "چسب بسته بندی",
-                href: "/printing-packaging/packaging-adhesives",
+                href: "/utilities/printing-packaging/packaging-adhesives",
             },
             {
                 name: "چسب شفاف (PVA15%)",
-                href: "/printing-packaging/transparent-adhesive",
+                href: "/utilities/printing-packaging/transparent-adhesive",
             },
             {
                 name: "چاپ استیکر",
-                href: "/printing-packaging/sticker-printing",
+                href: "/utilities/printing-packaging/sticker-printing",
             },
             {
                 name: "چسب باند گچی",
-                href: "/printing-packaging/gummed-tape",
+                href: "/utilities/printing-packaging/gummed-tape",
             },
             {
                 name: "چسب کارتن",
-                href: "/printing-packaging/carton-adhesive",
+                href: "/utilities/printing-packaging/carton-adhesive",
             },
         ],
     },
     {
         name: "صنایع چوب",
-        href: "/wood-industry",
+        href: "/utilities/wood-industry",
         subUtilities: [
             {
                 name: "پوشش چوب",
-                href: "/wood-industry/wood-coating",
+                href: "/utilities/wood-industry/wood-coating",
             },
             {
                 name: "چسب چوب",
-                href: "/wood-industry/wood-adhesive",
+                href: "/utilities/wood-industry/wood-adhesive",
             },
         ],
     },
     {
         name: "صنعت نساجی",
-        href: "/textile-industry",
+        href: "/utilities/textile-industry",
         subUtilities: [
             {
                 name: "تکمیل لوردراپه",
-                href: "/textile-industry/lordrape-finishing",
+                href: "/utilities/textile-industry/lordrape-finishing",
             },
             {
                 name: "آهار فرش ماشینی",
-                href: "/textile-industry/machine-carpet-stiffener",
+                href: "/utilities/textile-industry/machine-carpet-stiffener",
             },
             {
                 name: "آهار انواع پرده",
-                href: "/textile-industry/curtain-stiffener",
+                href: "/utilities/textile-industry/curtain-stiffener",
             },
             {
                 name: "آهار موکت",
-                href: "/textile-industry/moquette-stiffener",
+                href: "/utilities/textile-industry/moquette-stiffener",
             },
         ],
     },
     {
         name: "ادتیوها",
-        href: "/additives",
+        href: "/utilities/additives",
         subUtilities: [
             {
                 name: "ضد کف سیلیکونی",
-                href: "/additives/silicone-anti-foam",
+                href: "/utilities/additives/silicone-anti-foam",
             },
         ],
     },
@@ -299,158 +299,164 @@ export const products = [
         subProducts: [
             {
                 name: "AWA 100",
-                href: "/vinyl-acetate-homopolymers-water-based/awa-100",
+                href: "/products/vinyl-acetate-homopolymers-water-based/awa-100",
             },
             {
                 name: "AWA H100",
-                href: "/vinyl-acetate-homopolymers-water-based/awa-h100",
+                href: "/products/vinyl-acetate-homopolymers-water-based/awa-h100",
             },
             {
                 name: "AWA H120",
-                href: "/vinyl-acetate-homopolymers-water-based/awa-h120",
+                href: "/products/vinyl-acetate-homopolymers-water-based/awa-h120",
             },
             {
                 name: "AWA H125",
-                href: "/vinyl-acetate-homopolymers-water-based/awa-h125",
+                href: "/products/vinyl-acetate-homopolymers-water-based/awa-h125",
             },
             {
                 name: "AWA H130",
-                href: "/vinyl-acetate-homopolymers-water-based/awa-h130",
+                href: "/products/vinyl-acetate-homopolymers-water-based/awa-h130",
             },
             {
                 name: "AWA 150",
-                href: "/vinyl-acetate-homopolymers-water-based/awa-150",
+                href: "/products/vinyl-acetate-homopolymers-water-based/awa-150",
             },
         ],
     },
     {
         name: "کوپلیمر وینیل استاتی پایه آب",
-        href: "/products/vinyl-acetate-copolymers-water-based",
+        href: "/products/products/vinyl-acetate-copolymers-water-based",
         subProducts: [
             {
                 name: "AWA 22",
-                href: "/vinyl-acetate-copolymers-water-based/awa-22",
+                href: "/products/vinyl-acetate-copolymers-water-based/awa-22",
             },
             {
                 name: "AWA 220",
-                href: "/vinyl-acetate-copolymers-water-based/awa-220",
+                href: "/products/vinyl-acetate-copolymers-water-based/awa-220",
             },
             {
                 name: "AWA 225",
-                href: "/vinyl-acetate-copolymers-water-based/awa-225",
+                href: "/products/vinyl-acetate-copolymers-water-based/awa-225",
             },
             {
                 name: "AWA 55",
-                href: "/vinyl-acetate-copolymers-water-based/awa-55",
+                href: "/products/vinyl-acetate-copolymers-water-based/awa-55",
             },
             {
                 name: "AWA 60",
-                href: "/vinyl-acetate-copolymers-water-based/awa-60",
+                href: "/products/vinyl-acetate-copolymers-water-based/awa-60",
             },
             {
                 name: "AWA 66",
-                href: "/vinyl-acetate-copolymers-water-based/awa-66",
+                href: "/products/vinyl-acetate-copolymers-water-based/awa-66",
             },
             {
                 name: "MT 90",
-                href: "/vinyl-acetate-copolymers-water-based/mt-90",
+                href: "/products/vinyl-acetate-copolymers-water-based/mt-90",
             },
         ],
     },
     {
         name: "کوپلیمر استایرن-اکرلیک پایه آب",
-        href: "/products/styrene-acrylic-copolymers-water-based",
+        href: "/products/products/styrene-acrylic-copolymers-water-based",
         subProducts: [
             {
                 name: "SA 82",
-                href: "/styrene-acrylic-copolymers-water-based/sa-82",
+                href: "/products/styrene-acrylic-copolymers-water-based/sa-82",
             },
             {
                 name: "SA 83",
-                href: "/styrene-acrylic-copolymers-water-based/sa-83",
+                href: "/products/styrene-acrylic-copolymers-water-based/sa-83",
             },
             {
                 name: "SA 84",
-                href: "/styrene-acrylic-copolymers-water-based/sa-84",
+                href: "/products/styrene-acrylic-copolymers-water-based/sa-84",
             },
             {
                 name: "SA 85",
-                href: "/styrene-acrylic-copolymers-water-based/sa-85",
+                href: "/products/styrene-acrylic-copolymers-water-based/sa-85",
             },
             {
                 name: "SA 86",
-                href: "/styrene-acrylic-copolymers-water-based/sa-86",
+                href: "/products/styrene-acrylic-copolymers-water-based/sa-86",
             },
             {
                 name: "SA 87",
-                href: "/styrene-acrylic-copolymers-water-based/sa-87",
+                href: "/products/styrene-acrylic-copolymers-water-based/sa-87",
             },
             {
                 name: "SA 88",
-                href: "/styrene-acrylic-copolymers-water-based/sa-88",
+                href: "/products/styrene-acrylic-copolymers-water-based/sa-88",
             },
             {
                 name: "SA 88M",
-                href: "/styrene-acrylic-copolymers-water-based/sa-88m",
+                href: "/products/styrene-acrylic-copolymers-water-based/sa-88m",
             },
             {
                 name: "SA 89B",
-                href: "/styrene-acrylic-copolymers-water-based/sa-89b",
+                href: "/products/styrene-acrylic-copolymers-water-based/sa-89b",
             },
             {
                 name: "SA 90",
-                href: "/styrene-acrylic-copolymers-water-based/sa-90",
+                href: "/products/styrene-acrylic-copolymers-water-based/sa-90",
             },
             {
                 name: "SA 91",
-                href: "/styrene-acrylic-copolymers-water-based/sa-91",
+                href: "/products/styrene-acrylic-copolymers-water-based/sa-91",
             },
             {
                 name: "SA 400",
-                href: "/styrene-acrylic-copolymers-water-based/sa-400",
+                href: "/products/styrene-acrylic-copolymers-water-based/sa-400",
             },
             {
                 name: "SA 490H",
-                href: "/styrene-acrylic-copolymers-water-based/sa-490h",
+                href: "/products/styrene-acrylic-copolymers-water-based/sa-490h",
             },
             {
                 name: "SA 490S",
-                href: "/styrene-acrylic-copolymers-water-based/sa-490s",
+                href: "/products/styrene-acrylic-copolymers-water-based/sa-490s",
             },
         ],
     },
     {
         name: "کوپلیمر اکریلیک خالص",
-        href: "/products/pure-acrylic-copolymers",
+        href: "/products/products/pure-acrylic-copolymers",
         subProducts: [
             {
                 name: "PA 77",
-                href: "/pure-acrylic-copolymers/pa-77",
+                href: "/products/pure-acrylic-copolymers/pa-77",
             },
             {
                 name: "PA 78",
-                href: "/pure-acrylic-copolymers/pa-78",
+                href: "/products/pure-acrylic-copolymers/pa-78",
             },
             {
                 name: "PA 79",
-                href: "/pure-acrylic-copolymers/pa-79",
+                href: "/products/pure-acrylic-copolymers/pa-79",
             },
             {
                 name: "PA 117",
-                href: "/pure-acrylic-copolymers/pa-117",
+                href: "/products/pure-acrylic-copolymers/pa-117",
             },
             {
                 name: "PA 117(II)",
-                href: "/pure-acrylic-copolymers/pa-117-ii",
+                href: "/products/pure-acrylic-copolymers/pa-117-ii",
             },
         ],
     },
     {
         name: "ادتیوها",
-        href: "/products/additives",
+        href: "/products/products/additives",
         subProducts: [
-            { name: "A 42", href: "/additives/a-42" },
-            { name: "S-710", href: "/additives/s-710" },
+            {
+                name: "A 42",
+                href: "/products/additives/a-42",
+            },
+            {
+                name: "S-710",
+                href: "/products/additives/s-710",
+            },
         ],
     },
 ];

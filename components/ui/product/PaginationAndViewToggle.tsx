@@ -11,12 +11,7 @@ const PaginationAndViewToggle: React.FC<
         <div className="flex justify-center   gap-x-3 items-center  mt-4">
             <div className="flex items-center space-x-4 rtl:space-x-reverse ">
                 <div className="flex space-x-1 rtl:space-x-reverse border  ">
-                    {/* Pagination indicators - adjust colors and sizes as needed */}
-                    {/* <span className="w-2 h-6 bg-indigo-600 "></span>
-                    <span className="w-2 h-6 bg-indigo-600 "></span>
-                    <span className="w-2 h-6 bg-indigo-600 "></span>
-                    <span className="w-2 h-6 bg-gray-300 "></span>
-                    <span className="w-2 h-6 bg-gray-300 "></span> */}
+                    2
                 </div>
                 <div className="flex space-x-2 rtl:space-x-reverse">
                     <button
