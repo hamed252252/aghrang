@@ -1,4 +1,4 @@
-import { FilterAction } from "@/app/products/page";
+import { FilterAction } from "@/lib/constants";
 import React from "react";
 import { FaTh, FaList } from "react-icons/fa"; // Icons for grid and list views
 interface PaginationAndViewToggleProps {

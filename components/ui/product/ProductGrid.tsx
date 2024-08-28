@@ -1,7 +1,7 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 import { cn } from "@/lib/utils";
-import { FilterAction } from "@/app/products/page";
+import { FilterAction } from "@/lib/constants";
 
 interface ProductGridProps {
     filter: string;

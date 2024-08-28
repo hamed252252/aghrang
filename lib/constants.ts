@@ -11,6 +11,14 @@ import {
     FaAward,
 } from "react-icons/fa";
 import React from "react";
+export type FilterAction =
+    | { type: "SET_GRID"; payload: string }
+    | { type: "SET_LIST"; payload: string };
+
+// تعریف نوع حالت
+export interface FilterState {
+    filter: string;
+}
 
 export const icons = {
     infoCircle: React.createElement(FaInfoCircle),

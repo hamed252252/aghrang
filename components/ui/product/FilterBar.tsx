@@ -1,4 +1,4 @@
-import { FilterAction } from "@/app/products/page";
+import { FilterAction } from "@/lib/constants";
 import React from "react";
 interface FilterBarProps {
     dispatch: React.Dispatch<FilterAction>;
