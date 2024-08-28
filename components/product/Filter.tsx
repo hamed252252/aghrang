@@ -23,7 +23,7 @@ const Filter: React.FC = () => {
                 </SheetTrigger>
                 <SheetContent
                     dir="rtl"
-                    className="font-iransans w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl"
+                    className="font-iransans w-full max-w-sm sm:max-w-sm md:max-w-lg lg:max-w-xl"
                 >
                     <SheetHeader>
                         <SheetTitle

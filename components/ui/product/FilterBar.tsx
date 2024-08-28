@@ -11,7 +11,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
             className="relative flex justify-center items-center 
          text-right flex-row"
         >
-            <div className="text-gray-700">
+            <div className="text-gray-700 mr-3 text-sm sm:text-md overflow-auto ">
                 نمایش محصولات 1 تا 24 از 200 نتیجه
             </div>
             <div>
