@@ -1,4 +1,7 @@
 "use client";
+import ProductList from "@/components/magicui/ProductList";
+import Filter from "@/components/product/Filter";
+import SearchBar from "@/components/product/SearchBar";
 import FilterBar from "@/components/ui/product/FilterBar";
 import PaginationAndViewToggle from "@/components/ui/product/PaginationAndViewToggle";
 import ProductGrid from "@/components/ui/product/ProductGrid";
@@ -37,6 +40,11 @@ const Products: React.FC = () => {
                 />
                 <FilterBar dispatch={dispatch} />
             </div>
+            <div className="flex justify-center items-center">
+                <Filter />
+                <SearchBar />
+            </div>
+            <div className="flex flex-col"></div>
             <ProductGrid
                 dispatch={dispatch}
                 filter={state.filter}

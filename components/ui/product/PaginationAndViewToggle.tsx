@@ -10,9 +10,6 @@ const PaginationAndViewToggle: React.FC<
     return (
         <div className="flex justify-center   gap-x-3 items-center  mt-4">
             <div className="flex items-center space-x-4 rtl:space-x-reverse ">
-                <div className="flex space-x-1 rtl:space-x-reverse border  ">
-                    2
-                </div>
                 <div className="flex space-x-2 rtl:space-x-reverse">
                     <button
                         className="p-2 bg-gray-200 rounded  hover:bg-gray-300 "
