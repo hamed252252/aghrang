@@ -49,20 +49,22 @@ const ProductGrid: React.FC<ProductGridProps> = ({
     return (
         <>
             {filter === "grid-rows-1" ? (
-                <div
-                    className={cn(
-                        "grid gap-4 p-4", // Common styles
-                        "grid-cols-1 grid-rows-1" // Single row grid for specific filter
-                    )}
-                >
-                    {products.map((product, index) => (
-                        <ProductCard
-                            filter={filter}
-                            key={index}
-                            {...product}
-                        />
-                    ))}
-                </div>
+                <>
+                    <div
+                        className={cn(
+                            "grid gap-4 p-4", // Common styles
+                            "grid-cols-1 grid-rows-1  " // Single row grid for specific filter
+                        )}
+                    >
+                        {products.map((product, index) => (
+                            <ProductCard
+                                filter={filter}
+                                key={index}
+                                {...product}
+                            />
+                        ))}
+                    </div>
+                </>
             ) : (
                 <div
                     className={cn(

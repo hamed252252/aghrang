@@ -23,14 +23,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
     const renderOverlayIcons = () => (
         <div className="absolute inset-0 flex justify-center items-center gap-x-4 bg-gray-800 bg-opacity-50 opacity-0 hover:opacity-100 ease-in-out duration-300 transition-opacity">
-            <div className="bg-white p-3 rounded-full shadow-md hover:bg-gray-300 transition-all ease-in-out duration-300">
-                <Scale className="w-6 h-6 text-gray-800" />
+            <div className="bg-white p-2 md:p-3 xl:p-4 rounded-full shadow-md hover:bg-gray-300 transition-all ease-in-out duration-300">
+                <Scale className="w-2 h-2 md:w-4 md:h-4 xl:w-6 xl:h-6 text-gray-800" />
             </div>
-            <div className="bg-white p-3 rounded-full shadow-md hover:bg-gray-300 transition-all ease-in-out duration-300">
-                <Eye className="w-6 h-6 text-gray-800" />
+            <div className="bg-white p-2 rounded-full shadow-md hover:bg-gray-300 transition-all ease-in-out duration-300">
+                <Eye className="w-2 h-2 md:w-4 md:h-4 xl:w-6 xl:h-6 text-gray-800" />
             </div>
-            <div className="bg-white p-3 rounded-full shadow-md hover:bg-gray-300 transition-all ease-in-out duration-300">
-                <ShoppingCart className="w-6 h-6 text-gray-800" />
+            <div className="bg-white p-2 rounded-full shadow-md hover:bg-gray-300 transition-all ease-in-out duration-300">
+                <ShoppingCart className="w-2 h-2 md:w-4 md:h-4 xl:w-6 xl:h-6 text-gray-800" />
             </div>
         </div>
     );
@@ -38,13 +38,13 @@ const ProductCard: React.FC<ProductCardProps> = ({
     return filter === "grid-rows-1" ? (
         <div
             dir="rtl"
-            className="flex items-center bg-white shadow-lg rounded-lg w-[60vw] h-[45vh] mx-auto my-4 relative overflow-hidden"
+            className="flex items-center bg-white shadow-lg rounded-lg w-[100vw] h-[45vh] mx-auto my-4 relative overflow-hidden"
         >
-            <div className="flex-shrink-0 w-1/3 relative">
+            <div className="flex-shrink-0 w-1/3 h-full relative">
                 <img
                     src={image}
                     alt={title}
-                    className="h-full w-full object-cover rounded-r-lg"
+                    className="h-[50vw] w-full object-cover rounded-r-lg"
                 />
                 {renderOverlayIcons()}
             </div>
@@ -71,12 +71,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
             </div>
         </div>
     ) : (
-        <div className="  rounded-lg overflow-hidden mx-auto shadow-lg bg-white my-4 relative">
+        <div className="  rounded-lg overflow-hidden  mx-auto shadow-lg bg-white my-4 relative">
             <div className="relative">
                 <img
                     src={image}
                     alt={title}
-                    className="w-full h-[62vh] object-cover"
+                    className=" w-[70vw] md:w-[45vw] xl:w-[22vw]  h-[62vh] object-cover"
                 />
                 {renderOverlayIcons()}
             </div>
