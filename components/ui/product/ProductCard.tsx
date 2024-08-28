@@ -38,7 +38,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     return filter === "grid-rows-1" ? (
         <div
             dir="rtl"
-            className="flex items-center bg-white shadow-lg rounded-lg w-[100vw] h-[45vh] mx-auto my-4 relative overflow-hidden"
+            className="flex items-center bg-white shadow-lg rounded-lg w-[95vw] h-[45vh] mx-auto my-4 relative overflow-hidden"
         >
             <div className="flex-shrink-0 w-1/3 h-full relative">
                 <img
