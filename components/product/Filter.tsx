@@ -61,7 +61,10 @@ const Filter: React.FC = () => {
                                     name="category"
                                     className="mr-2"
                                 />
-                                <label htmlFor={category}>
+                                <label
+                                    className="mr-2"
+                                    htmlFor={category}
+                                >
                                     {category}
                                 </label>
                             </div>
@@ -88,7 +91,10 @@ const Filter: React.FC = () => {
                                     id={brand}
                                     className="mr-2"
                                 />
-                                <label htmlFor={brand}>
+                                <label
+                                    className="mr-2"
+                                    htmlFor={brand}
+                                >
                                     {brand}
                                 </label>
                             </div>

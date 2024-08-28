@@ -29,7 +29,6 @@ const VideoSlider: React.FC<VideoSliderProps> = ({
                     className="absolute text-primary-foreground top-2 right-2 p-3 z-10"
                 >
                     <X />
-                    Close
                 </Button>
                 <Swiper
                     initialSlide={selectedVideo}

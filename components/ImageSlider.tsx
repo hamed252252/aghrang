@@ -28,7 +28,6 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
                     className="absolute text-primary-foreground top-2 right-2 p-3 z-10"
                 >
                     <X />
-                    Close
                 </Button>
                 <Swiper
                     initialSlide={selectedImage}
