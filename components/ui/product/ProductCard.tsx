@@ -26,10 +26,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
             <div className="bg-white p-2 md:p-3 xl:p-4 rounded-full shadow-md hover:bg-gray-300 transition-all ease-in-out duration-300">
                 <Scale className="w-2 h-2 md:w-4 md:h-4 xl:w-6 xl:h-6 text-gray-800" />
             </div>
-            <div className="bg-white p-2 rounded-full shadow-md hover:bg-gray-300 transition-all ease-in-out duration-300">
+            <div className="bg-white p-2 md:p-3 xl:p-4 rounded-full shadow-md hover:bg-gray-300 transition-all ease-in-out duration-300">
                 <Eye className="w-2 h-2 md:w-4 md:h-4 xl:w-6 xl:h-6 text-gray-800" />
             </div>
-            <div className="bg-white p-2 rounded-full shadow-md hover:bg-gray-300 transition-all ease-in-out duration-300">
+            <div className="bg-white p-2 md:p-3 xl:p-4 rounded-full shadow-md hover:bg-gray-300 transition-all ease-in-out duration-300">
                 <ShoppingCart className="w-2 h-2 md:w-4 md:h-4 xl:w-6 xl:h-6 text-gray-800" />
             </div>
         </div>
