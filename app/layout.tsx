@@ -7,16 +7,13 @@ import Footer from "@/components/ui/Footer";
 import localFont from "next/font/local";
 import { cn } from "@/lib/utils";
 
+// Google Fonts
 const inter = Inter({ subsets: ["latin"] });
 const myfont = Baloo_Bhaijaan_2({ subsets: ["arabic"] });
-export const metadata: Metadata = {
-    title: "Agh Rang",
-    description: "Agh Rang Compant ",
-};
 
+// Local Fonts
 const myFont = localFont({
     src: [
-        // { , path: "./fonts/IRANSansXV.woff2" },
         {
             weight: "100",
             style: "normal",
@@ -73,28 +70,34 @@ const myFont = localFont({
             path: "./fonts/woff2/IRANSansX-Regular.woff2",
         },
     ],
-    display: "block",
+    display: "swap", // Consider using "swap" for better performance
     variable: "--font-Iransans--per",
 });
+
+// Metadata configuration using Metadata API
+export const metadata: Metadata = {
+    title: "Agh Rang",
+    description: "Agh Rang Company",
+};
+
+// Root Layout Component
 export default function RootLayout({
     children,
-}: Readonly<{
+}: {
     children: React.ReactNode;
-}>) {
+}) {
     return (
         <html
-            lang=""
+            lang="fa"
             dir="rtl"
         >
             <body
-                className={
-                    (cn(
-                        `min-h-screen bg-background antialiased,
-                    fontSans.variable  font-iransans`
-                    ),
-                    myFont.className,
-                    myFont.variable)
-                }
+                className={cn(
+                    "min-h-screen bg-background antialiased",
+
+                    myFont.variable,
+                    myFont.className
+                )}
             >
                 <ThemeProvider
                     attribute="class"

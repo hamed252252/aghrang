@@ -62,11 +62,11 @@ export let multiMedia: Multimedia[] = [
     },
     {
         name: "گالری تصاویر", // Image Gallery
-        link: "image-gallery",
+        link: "gallery",
     },
     {
         name: "گالری ویدویی", // Video Gallery
-        link: "video-gallery",
+        link: "gallery",
     },
 ];
 interface MenuItem {

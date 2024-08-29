@@ -1,7 +1,17 @@
 "use client";
 // Step 3: Gallery.tsx
-import React, { useState } from "react";
-import ImageSlider from "./ImageSlider";
+import React, {
+    useState,
+    useCallback,
+    useMemo,
+} from "react";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+
+// Dynamically import ImageSlider to load it only when needed
+const ImageSlider = dynamic(() => import("./ImageSlider"), {
+    ssr: false,
+});
 
 const images = [
     {
@@ -24,20 +34,24 @@ const Gallery: React.FC = () => {
         number | null
     >(null);
 
-    return (
-        <div className="grid grid-cols-3 gap-4 p-4 font-iransans my-10">
-            {images.map((image, index) => (
+    // Memoize image rendering
+    const renderedImages = useMemo(
+        () =>
+            images.map((image, index) => (
                 <div
                     key={index}
                     className="cursor-pointer rounded-md p-3"
                     onClick={() => setSelectedImage(index)}
                 >
                     <div className="border rounded-md p-2">
-                        <img
+                        <Image
                             src={image.url}
                             alt={`Gallery image ${
                                 index + 1
                             }`}
+                            width={300}
+                            height={200}
+                            layout="responsive"
                             className="w-full h-full object-cover rounded-md"
                         />
                         <div className="mt-2">
@@ -50,15 +64,25 @@ const Gallery: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            ))}
+            )),
+        []
+    );
+
+    // Use useCallback to memoize the closeSlider function
+    const closeSlider = useCallback(
+        () => setSelectedImage(null),
+        []
+    );
+
+    return (
+        <div className="grid grid-cols-3 gap-4 p-4 font-iransans my-10">
+            {renderedImages}
 
             {selectedImage !== null && (
                 <ImageSlider
                     images={images}
                     selectedImage={selectedImage}
-                    closeSlider={() =>
-                        setSelectedImage(null)
-                    }
+                    closeSlider={closeSlider}
                 />
             )}
         </div>
