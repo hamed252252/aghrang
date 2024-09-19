@@ -3,79 +3,58 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 const About = () => {
-    const headerRef = useRef<HTMLHeadingElement>(null);
-    const paragraphRef = useRef<HTMLParagraphElement>(null);
-    const missionCardRef = useRef<HTMLDivElement>(null);
-    const visionCardRef = useRef<HTMLDivElement>(null);
-    const valuesCardRef = useRef<HTMLDivElement>(null);
-    const storyCardRef = useRef<HTMLDivElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        // Header animation
-        gsap.fromTo(
-            headerRef.current,
-            { opacity: 0 },
-            { opacity: 1, duration: 1.5 }
-        );
+        const ctx = gsap.context(() => {
+            const timeline = gsap.timeline();
 
-        // Paragraph animation
-        gsap.fromTo(
-            paragraphRef.current,
-            { x: "100%", opacity: 0 },
-            {
-                x: 0,
-                opacity: 1,
+            // Header animation
+            timeline.from(".about-header", {
+                opacity: 0,
                 duration: 1.5,
-                ease: "easeOut",
-            }
-        );
-
-        // Cards animation
-        const cardRefs = [
-            missionCardRef.current,
-            visionCardRef.current,
-            valuesCardRef.current,
-            storyCardRef.current,
-        ];
-
-        gsap.fromTo(
-            cardRefs.filter(Boolean), // Filter out any null values
-            { scale: 0.9, opacity: 0 },
-            {
-                scale: 1,
-                opacity: 1,
-                duration: 0.8,
-                stagger: 0.2,
-            }
-        );
-
-        // Hover effect for cards
-        cardRefs.forEach((card) => {
-            card?.addEventListener("mouseenter", () => {
-                gsap.to(card, { scale: 1.05 });
             });
-            card?.addEventListener("mouseleave", () => {
-                gsap.to(card, { scale: 1 });
-            });
-        });
+
+            // Paragraph animation
+            timeline.from(
+                ".about-paragraph",
+                {
+                    x: "100%",
+                    opacity: 0,
+                    duration: 1.5,
+                    ease: "easeOut",
+                },
+                "-=1.2"
+            ); // Overlap with header animation
+
+            // Cards animation
+            timeline.from(
+                ".about-card",
+                {
+                    scale: 0.9,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.2,
+                    ease: "power1.out",
+                },
+                "-=1"
+            ); // Slight overlap with paragraph animation
+        }, containerRef);
+
+        return () => ctx.revert();
     }, []);
 
     return (
         <div
+            ref={containerRef}
             className="min-h-screen bg-gradient-to-r font-iransans from-indigo-500 via-purple-500 to-pink-500 flex flex-col items-center py-12"
             dir="rtl"
         >
             <div className="max-w-4xl w-full px-6 text-center">
-                <h1
-                    ref={headerRef}
-                    className="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl drop-shadow-lg"
-                >
+                <h1 className="about-header text-4xl font-extrabold text-white sm:text-5xl md:text-6xl drop-shadow-lg">
                     درباره ما
                 </h1>
-                <p
-                    ref={paragraphRef}
-                    className="mt-6 text-lg text-gray-200 leading-relaxed drop-shadow-md"
-                >
+                <p className="about-paragraph mt-6 text-lg text-gray-200 leading-relaxed drop-shadow-md">
                     ما یک تیم پرشور از حرفه‌ای‌ها هستیم که
                     به ارائه خدمات عالی و راه‌حل‌های
                     نوآورانه اختصاص داریم. تعهد ما به برتری،
@@ -86,14 +65,11 @@ const About = () => {
             </div>
 
             <div className="mt-12 max-w-4xl w-full flex flex-col md:flex-row gap-6">
-                <div
-                    ref={missionCardRef}
-                    className="bg-white bg-opacity-80 shadow-lg rounded-lg p-6 flex-1"
-                >
-                    <h2 className="text-2xl font-bold text-gray-800">
+                <div className="about-card bg-white bg-opacity-80 shadow-lg rounded-lg p-6 flex-1 transform transition-transform duration-300 hover:scale-105">
+                    <h2 className="text-2xl font-bold text-gray-800/70">
                         ماموریت ما
                     </h2>
-                    <p className="mt-4 text-gray-600">
+                    <p className="mt-4 text-black">
                         ماموریت ما توانمندسازی کسب‌وکارها و
                         افراد از طریق ارائه راه‌حل‌های عالی
                         است که موفقیت و رشد را هدایت می‌کند.
@@ -103,14 +79,11 @@ const About = () => {
                     </p>
                 </div>
 
-                <div
-                    ref={visionCardRef}
-                    className="bg-white bg-opacity-80 shadow-lg rounded-lg p-6 flex-1"
-                >
-                    <h2 className="text-2xl font-bold text-gray-800">
+                <div className="about-card bg-white bg-opacity-80 shadow-lg rounded-lg p-6 flex-1 transform transition-transform duration-300 hover:scale-105">
+                    <h2 className="text-2xl font-bold text-gray-800/70">
                         چشم‌انداز ما
                     </h2>
-                    <p className="mt-4 text-gray-600">
+                    <p className="mt-4 text-black">
                         چشم‌انداز ما این است که به یک رهبر
                         جهانی در حوزه خود تبدیل شویم، به
                         خاطر نوآوری، کیفیت و رضایت مشتری
@@ -122,14 +95,11 @@ const About = () => {
             </div>
 
             <div className="mt-12 max-w-4xl w-full flex flex-col md:flex-row gap-6">
-                <div
-                    ref={valuesCardRef}
-                    className="bg-white bg-opacity-80 shadow-lg rounded-lg p-6 flex-1"
-                >
-                    <h2 className="text-2xl font-bold text-gray-800">
+                <div className="about-card bg-white bg-opacity-80 shadow-lg rounded-lg p-6 flex-1 transform transition-transform duration-300 hover:scale-105">
+                    <h2 className="text-2xl font-bold text-gray-800/70">
                         ارزش‌های ما
                     </h2>
-                    <ul className="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                    <ul className="mt-4 list-disc list-inside text-black space-y-2">
                         <li>
                             صداقت: ما به بالاترین
                             استانداردهای اخلاقی پایبندیم.
@@ -154,14 +124,11 @@ const About = () => {
                     </ul>
                 </div>
 
-                <div
-                    ref={storyCardRef}
-                    className="bg-white bg-opacity-80 shadow-lg rounded-lg p-6 flex-1"
-                >
-                    <h2 className="text-2xl font-bold text-gray-800">
+                <div className="about-card bg-white bg-opacity-80 shadow-lg rounded-lg p-6 flex-1 transform transition-transform duration-300 hover:scale-105">
+                    <h2 className="text-2xl font-bold text-gray-800/70">
                         داستان ما
                     </h2>
-                    <p className="mt-4 text-gray-600">
+                    <p className="mt-4 text-black">
                         شرکت ما در سال ۲۰۲۰ تأسیس شد و از یک
                         تیم کوچک با رویای بزرگ شروع شد.
                         امروز ما به یک کسب‌وکار پر رونق با
@@ -175,4 +142,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default React.memo(About);

@@ -5,6 +5,7 @@ import {
     CarouselItem,
     useCarousel,
 } from "@/components/Carousel";
+import Image from "next/image";
 
 function CarouselMP({
     imagePaths,
@@ -23,8 +24,9 @@ function CarouselMP({
                         key={idx}
                         className=""
                     >
-                        <div className="flex aspect-square items-center justify-center rounded-sm border border-zinc-200 dark:border-zinc-800">
-                            <img
+                        <div className="flex relative aspect-square items-center justify-center rounded-sm border border-zinc-200 dark:border-zinc-800">
+                            <Image
+                                fill
                                 src={item}
                                 alt={`Slide ${idx + 1}`}
                                 className="object-contain w-full h-auto max-h-[36rem]" // Increased size to 36rem
@@ -48,7 +50,8 @@ function CarouselMP({
                                 : "opacity-50"
                         }`} // Further increased size for indicators
                     >
-                        <img
+                        <Image
+                            fill
                             src={ITEMS[idx]}
                             alt={`Indicator ${idx + 1}`}
                             className="object-cover w-full h-full "

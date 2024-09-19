@@ -25,7 +25,10 @@ const VideoGallery: React.FC = () => {
     >(null);
 
     return (
-        <div className="grid grid-cols-3 gap-4 p-4 font-iransans my-10">
+        <div
+            suppressHydrationWarning
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 font-iransans my-10"
+        >
             {videos.map((video, index) => (
                 <div
                     key={index}

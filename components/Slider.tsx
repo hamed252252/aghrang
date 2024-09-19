@@ -47,9 +47,10 @@ const Slider = () => {
                             <Image
                                 src={image}
                                 alt={`Slide ${index + 1}`}
+                                fill
                                 layout="fill"
+                                loading="lazy"
                                 className="object-cover"
-                                priority={index === 0}
                             />
                         </div>
                     </SwiperSlide>

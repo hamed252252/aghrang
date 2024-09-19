@@ -125,8 +125,8 @@ export function TextEffect({
     className,
     preset,
 }: TextEffectProps) {
-    const words = children.split(/(\S+)/);
-    const MotionTag = motion[as as keyof typeof motion];
+    const words = children.split(/(\S+)/); // Splits based on non-whitespace characters.
+    const MotionTag = motion(as); // Use `motion(as)` to create the motion component dynamically.
     const selectedVariants = preset
         ? presetVariants[preset]
         : {

@@ -1,8 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import {
+    Navigation,
+    Pagination,
+    Virtual,
+} from "swiper/modules";
 import "swiper/css/bundle";
-import { useSwiper } from "swiper/react";
 
 import { X } from "lucide-react";
 import { Button } from "../ui/button";
@@ -18,8 +21,6 @@ const VideoSlider: React.FC<VideoSliderProps> = ({
     selectedVideo,
     closeSlider,
 }) => {
-    const swiper = useSwiper();
-
     return (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
             <div className="relative w-3/4 h-3/4">
@@ -32,16 +33,25 @@ const VideoSlider: React.FC<VideoSliderProps> = ({
                 </Button>
                 <Swiper
                     initialSlide={selectedVideo}
-                    modules={[Navigation, Pagination]}
+                    modules={[
+                        Navigation,
+                        Pagination,
+                        Virtual,
+                    ]}
                     navigation
                     pagination={{ clickable: true }}
+                    virtual
                     className="w-full h-full"
                 >
                     {videos.map((video, index) => (
-                        <SwiperSlide key={index}>
+                        <SwiperSlide
+                            key={index}
+                            virtualIndex={index}
+                        >
                             <div className="relative w-full h-full overflow-hidden">
                                 <video
                                     controls
+                                    preload="none"
                                     className="w-full h-full object-cover"
                                 >
                                     <source

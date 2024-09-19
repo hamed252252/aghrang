@@ -46,33 +46,15 @@ gsap.registerPlugin(
     SlowMo,
     CustomEase
 );
-import {
-    BellIcon,
-    CalendarIcon,
-    FileTextIcon,
-    GlobeIcon,
-    InputIcon,
-} from "@radix-ui/react-icons";
 
-import {
-    BentoCard,
-    BentoGrid,
-} from "@/components/magicui/bento-grid";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { title } from "process";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import WordPullUp from "./magicui/word-pull-up";
 import { TextEffect } from "./TextEffect";
 
 const Content = () => {
-    useGSAP(() => {
-        gsap.from(".text-justify", {
-            y: 100,
-            stagger: 1.5,
-        });
-    }, []);
     return (
         <div>
             <ContentItem
@@ -104,7 +86,7 @@ export const ContentItem = ({
     companyName,
 }: ContentItem) => {
     return (
-        <div
+        <section
             dir="rtl"
             className="container"
         >
@@ -218,7 +200,7 @@ export const ContentItem = ({
                     )}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
@@ -328,6 +310,7 @@ export const ProductionItem = ({
         >
             <div className="flex flex-col justify-center items-center gap-y-3 p-6">
                 <Image
+                    loading="lazy"
                     src={icon}
                     alt="icon"
                 />

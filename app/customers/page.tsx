@@ -5,7 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { CircleUser } from "lucide-react";
 import useFetchData from "./useFetchData"; // Import custom hook
-import defaultImage from "@/public/images/girl.avif";
+import defaultImage from "@/public/woman.jpg";
 // Default image and content for fallback
 const defaultData = {
     imageUrl: defaultImage.src,

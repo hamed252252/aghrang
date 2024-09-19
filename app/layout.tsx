@@ -71,8 +71,18 @@ const myFont = localFont({
 
 // Metadata configuration using Metadata API
 export const metadata: Metadata = {
-    title: "Agh Rang",
-    description: "Agh Rang Company",
+    title: {
+        default: "آق رنگ کارخانه ی تولید رنگ",
+        template: "%s" + "آق رنگ کارخانه ی تولید رنگ",
+    },
+    description: "آق رنگ کارخانه ی تولید رنگ",
+
+    icons: [
+        {
+            href: "/aghrang_preview_rev_1.png",
+            url: "/aghrang_preview_rev_1.png",
+        },
+    ],
 };
 
 // Root Layout Component
@@ -83,26 +93,19 @@ export default function RootLayout({
 }) {
     return (
         <html
+            suppressHydrationWarning
             lang="fa"
             dir="rtl"
         >
             <body
                 className={cn(
-                    "min-h-screen bg-background antialiased",
+                    "min-h-screen bg-background font-iransans antialiased",
                     myFont.variable // Ensuring font variable is applied correctly
                 )}
             >
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="light"
-                    forcedTheme="light"
-                    enableSystem
-                    disableTransitionOnChange
-                >
-                    <Menus />
-                    {children}
-                    <Footer />
-                </ThemeProvider>
+                <Menus />
+                {children}
+                <Footer />
             </body>
         </html>
     );

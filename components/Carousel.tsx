@@ -208,7 +208,12 @@ type CarouselContentProps = {
 function CarouselContent({
     children,
     className,
-    transition,
+    transition = {
+        damping: 18,
+        stiffness: 90,
+        type: "spring",
+        duration: 0.2,
+    },
 }: CarouselContentProps) {
     const { index, setIndex, setItemsCount } =
         useCarousel();
@@ -281,14 +286,7 @@ function CarouselContent({
                 }%`,
             }}
             onDragEnd={onDragEnd}
-            transition={
-                {
-                    damping: 18,
-                    stiffness: 90,
-                    type: "spring",
-                    duration: 0.2,
-                } || transition
-            }
+            transition={transition} // Passing the transition directly
             className={cn(
                 "flex cursor-grab items-center active:cursor-grabbing",
                 className
@@ -299,7 +297,6 @@ function CarouselContent({
         </motion.div>
     );
 }
-
 type CarouselItemProps = {
     children: ReactNode;
     className?: string;

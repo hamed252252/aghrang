@@ -68,8 +68,8 @@ const ProductGrid: React.FC<ProductGridProps> = ({
             ) : (
                 <div
                     className={cn(
-                        "grid gap-4 p-4", // Common styles
-                        "grid-cols-1  md:grid-cols-2 xl:grid-cols-3  2xl:grid-cols-4" // Responsive grid columns
+                        "grid gap-4 ", // Common styles
+                        "grid-cols-1  md:grid-cols-2 xl:grid-cols-3  min-w-full min-h-full" // Responsive grid columns
                     )}
                 >
                     {products.map((product, index) => (

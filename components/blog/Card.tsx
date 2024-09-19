@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface CardProps {
@@ -13,11 +14,13 @@ const Card: React.FC<CardProps> = ({
     description,
     imageSrc,
 }) => (
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out opacity-0 animate-fadeIn">
-        <img
+    <div className=" bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out opacity-0 animate-fadeIn">
+        <Image
+            width={100}
+            height={192}
             src={imageSrc}
             alt={title}
-            className="w-full h-48 object-cover transition-opacity duration-300 ease-in-out hover:opacity-80"
+            className="w-full  h-48 object-cover transition-opacity duration-300 ease-in-out hover:opacity-80"
         />
         <div className="p-6">
             <h3 className="text-gray-700 text-lg font-semibold mb-1">
