@@ -195,38 +195,27 @@ export const ContentItem = ({
                     </span>
                     <div className="w-16 h-1 bg-slate-400"></div>
                 </div>
-                <div className="mt-6 space-y-6">
-                    {[0, 1].map((row) => (
-                        <div
-                            key={row}
-                            className="flex gap-x-6"
-                        >
-                            {productCategories
-                                .slice(row * 3, row * 3 + 3)
-                                .map((category, index) => (
-                                    <div
-                                        key={index}
-                                        className="relative flex-1 flex flex-col items-center justify-center overflow-hidden transition-all duration-300 transform hover:flex-grow-[1.2] hover:scale-x-102"
-                                    >
-                                        <Image
-                                            src={
-                                                category.src
-                                            }
-                                            alt={
-                                                category.alt
-                                            }
-                                            layout="responsive"
-                                            width={500}
-                                            height={500}
-                                            className="rounded-lg"
-                                        />
-                                        <div className="absolute bottom-0 w-full p-4 text-xl font-bold text-black bg-slate-200 opacity-85 text-start">
-                                            {category.label}
-                                        </div>
-                                    </div>
-                                ))}
-                        </div>
-                    ))}
+                <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    {productCategories.map(
+                        (category, index) => (
+                            <div
+                                key={index}
+                                className="relative flex flex-col items-center justify-center overflow-hidden transition-transform duration-300 transform hover:scale-105"
+                            >
+                                <Image
+                                    src={category.src}
+                                    alt={category.alt}
+                                    layout="responsive"
+                                    width={500}
+                                    height={500}
+                                    className="rounded-lg"
+                                />
+                                <div className="absolute bottom-0 w-full p-4 text-xl font-bold text-black bg-slate-200 bg-opacity-85 text-start">
+                                    {category.label}
+                                </div>
+                            </div>
+                        )
+                    )}
                 </div>
             </div>
         </div>

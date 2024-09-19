@@ -52,7 +52,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({
                 <>
                     <div
                         className={cn(
-                            "grid gap-4 p-4", // Common styles
+                            "grid gap-4 p-4 ", // Common styles
                             "grid-cols-1 grid-rows-1  " // Single row grid for specific filter
                         )}
                     >

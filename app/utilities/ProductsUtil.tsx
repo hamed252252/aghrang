@@ -1,8 +1,8 @@
 "use client";
 import ProductList from "@/components/magicui/ProductList";
 import Filter from "@/components/product/Filter";
-
 import CombinedComponent from "@/components/ui/product/CombinedComponent";
+
 import ProductGrid from "@/components/ui/product/ProductGrid";
 import { FilterAction, FilterState } from "@/lib/constants";
 import { useReducer } from "react";
@@ -25,7 +25,7 @@ function filterReducer(
 const initialState: FilterState = {
     filter: "grid-cols-4",
 };
-const Products: React.FC = () => {
+const ProductsUtil: React.FC = () => {
     const [state, dispatch] = useReducer(
         filterReducer,
         initialState
@@ -48,4 +48,4 @@ const Products: React.FC = () => {
     );
 };
 
-export default Products;
+export default ProductsUtil;

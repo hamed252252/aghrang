@@ -227,7 +227,13 @@ const Menus = () => {
 
                                 <NavigationMenuItem className="w-full">
                                     <NavigationMenuTrigger className="bg-transparent group-hover:bg-transparent  hover:text-primary-foreground">
-                                        کاربرد محصولات
+                                        <Link
+                                            href={
+                                                "/utilities"
+                                            }
+                                        >
+                                            کاربرد محصولات
+                                        </Link>
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent>
                                         {/* list  */}
@@ -314,7 +320,7 @@ const Menus = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-around items-start xl:hidden p-2">
+            <div className="flex justify-around items-start md:hidden p-2">
                 <div></div>
                 <div className="mt-4 flex-col flex items-start  justify-start">
                     <button
@@ -353,25 +359,28 @@ const Menus = () => {
                             asChild
                         ></DrawerTrigger>
                         <DrawerContent className="w-full    h-[70vh] p-4 font-iransans ">
-                            <DrawerHeader></DrawerHeader>
+                            <DrawerHeader>منو</DrawerHeader>
                             <div className="flex flex-col gap-y-2 text-lg text-black">
                                 <Accordion
                                     type="single"
                                     collapsible
                                 >
-                                    <AccordionItem value="about-us">
-                                        <Link
-                                            href={
-                                                "/aboutus"
-                                            }
-                                        >
+                                    <Link href={"/aboutus"}>
+                                        <AccordionItem value="about-us">
                                             درباره ی ما
-                                        </Link>
-                                    </AccordionItem>
+                                        </AccordionItem>
+                                    </Link>
 
                                     <AccordionItem value="utilities">
                                         <AccordionTrigger>
-                                            کاربرد محصولات
+                                            <Link
+                                                href={
+                                                    "/utilities"
+                                                }
+                                            >
+                                                کاربرد
+                                                محصولات
+                                            </Link>
                                         </AccordionTrigger>
                                         <AccordionContent>
                                             <div className="flex flex-col p-4 justify-center items-center">
@@ -429,7 +438,13 @@ const Menus = () => {
 
                                     <AccordionItem value="products">
                                         <AccordionTrigger>
-                                            محصولات
+                                            <Link
+                                                href={
+                                                    "/products"
+                                                }
+                                            >
+                                                محصولات
+                                            </Link>{" "}
                                         </AccordionTrigger>
                                         <AccordionContent>
                                             <div className="flex flex-col p-4 justify-center items-center">

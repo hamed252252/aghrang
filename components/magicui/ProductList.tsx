@@ -37,7 +37,7 @@ const ProductList: React.FC = () => {
                     <img
                         src={product.image}
                         alt={product.name}
-                        className="w-full h-48 object-cover rounded"
+                        className="w-full h-full object-cover rounded"
                     />
                     <h3 className="mt-2">{product.name}</h3>
                     <div className="flex items-center">

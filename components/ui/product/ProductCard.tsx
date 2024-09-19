@@ -1,6 +1,7 @@
 import React from "react";
 import { Eye, ShoppingCart, Scale } from "lucide-react";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 interface ProductCardProps {
     image: string;
@@ -24,13 +25,34 @@ const ProductCard: React.FC<ProductCardProps> = ({
     const renderOverlayIcons = () => (
         <div className="absolute inset-0 flex justify-center items-center gap-x-4 bg-gray-800 bg-opacity-50 opacity-0 hover:opacity-100 ease-in-out duration-300 transition-opacity">
             <div className="bg-white p-2 md:p-3 xl:p-4 rounded-full shadow-md hover:bg-gray-300 transition-all ease-in-out duration-300">
-                <Scale className="w-2 h-2 md:w-4 md:h-4 xl:w-6 xl:h-6 text-gray-800" />
+                <Scale
+                    className={cn(
+                        "w-2 h-2 md:w-4 md:h-4 xl:w-6 xl:h-6 text-gray-800",
+                        filter === "grid-rows-1"
+                            ? "w-6 h-6"
+                            : ""
+                    )}
+                />
             </div>
             <div className="bg-white p-2 md:p-3 xl:p-4 rounded-full shadow-md hover:bg-gray-300 transition-all ease-in-out duration-300">
-                <Eye className="w-2 h-2 md:w-4 md:h-4 xl:w-6 xl:h-6 text-gray-800" />
+                <Eye
+                    className={cn(
+                        "w-2 h-2 md:w-4 md:h-4 xl:w-6 xl:h-6 text-gray-800",
+                        filter === "grid-rows-1"
+                            ? "w-6 h-6"
+                            : ""
+                    )}
+                />
             </div>
             <div className="bg-white p-2 md:p-3 xl:p-4 rounded-full shadow-md hover:bg-gray-300 transition-all ease-in-out duration-300">
-                <ShoppingCart className="w-2 h-2 md:w-4 md:h-4 xl:w-6 xl:h-6 text-gray-800" />
+                <ShoppingCart
+                    className={cn(
+                        "w-2 h-2 md:w-4 md:h-4 xl:w-6 xl:h-6 text-gray-800",
+                        filter === "grid-rows-1"
+                            ? "w-6 h-6"
+                            : ""
+                    )}
+                />
             </div>
         </div>
     );
@@ -38,13 +60,13 @@ const ProductCard: React.FC<ProductCardProps> = ({
     return filter === "grid-rows-1" ? (
         <div
             dir="rtl"
-            className="flex items-center bg-white shadow-lg rounded-lg w-[95vw] h-[45vh] mx-auto my-4 relative overflow-hidden"
+            className="flex font-iransans  items-center  shadow-sm rounded-lg w-[90vw] h-[45vh] mx-auto my-4 relative overflow-hidden"
         >
-            <div className="flex-shrink-0 w-1/3 h-full relative">
+            <div className="flex-shrink-0 w-7/12 h-full relative">
                 <img
                     src={image}
                     alt={title}
-                    className="h-[50vw] w-full object-cover rounded-r-lg"
+                    className="h-full w-full object-cover rounded-r-lg"
                 />
                 {renderOverlayIcons()}
             </div>
@@ -71,7 +93,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             </div>
         </div>
     ) : (
-        <div className="  rounded-lg overflow-hidden  mx-auto shadow-lg bg-white my-4 relative">
+        <div className=" font-iransans rounded-lg overflow-hidden  mx-auto shadow-lg bg-white my-4 relative">
             <div className="relative">
                 <img
                     src={image}

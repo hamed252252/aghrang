@@ -23,7 +23,7 @@ function CarouselMP({
                         key={idx}
                         className=""
                     >
-                        <div className="flex aspect-square items-center justify-center border border-zinc-200 dark:border-zinc-800">
+                        <div className="flex aspect-square items-center justify-center rounded-sm border border-zinc-200 dark:border-zinc-800">
                             <img
                                 src={item}
                                 alt={`Slide ${idx + 1}`}
@@ -33,7 +33,7 @@ function CarouselMP({
                     </CarouselItem>
                 ))}
             </CarouselContent>
-            <div className="flex w-full justify-center space-x-4 px-4 mt-6">
+            <div className="flex w-full justify-center space-x-4 px-4 mt-6 ">
                 {ITEMS.map((_, idx) => (
                     <button
                         key={idx}
@@ -42,7 +42,7 @@ function CarouselMP({
                             idx + 1
                         }`}
                         onClick={() => setIndex(idx)}
-                        className={`h-24 w-24 border border-zinc-200 dark:border-zinc-800 ${
+                        className={`h-24 w-24 border border-zinc-200 rounded-sm dark:border-zinc-800 ${
                             idx === index
                                 ? "opacity-100"
                                 : "opacity-50"
@@ -51,7 +51,7 @@ function CarouselMP({
                         <img
                             src={ITEMS[idx]}
                             alt={`Indicator ${idx + 1}`}
-                            className="object-cover w-full h-full"
+                            className="object-cover w-full h-full "
                         />
                     </button>
                 ))}
@@ -70,7 +70,7 @@ export default function CarouselCustomIndicator({
             dir="ltr"
             className="relative w-full max-w-lg py-10" // Increased max width and padding
         >
-            <Carousel>
+            <Carousel className="rounded-md">
                 <CarouselMP imagePaths={imagePaths} />
             </Carousel>
         </div>
