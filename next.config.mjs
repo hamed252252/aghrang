@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ["via.placeholder.com", "img.freepik.com"], // Add external domains here
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "cdn.alibaba.ir",
+                pathname: "/ostorage/**", // Fix the pathname to match the external URL pattern
+            },
+        ],
+        domains: ["via.placeholder.com", "img.freepik.com"], // Add additional external domains here if needed
     },
 };
 

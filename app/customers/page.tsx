@@ -34,7 +34,7 @@ const Gallery: React.FC = () => {
 
     return (
         <div
-            className="bg-white rounded-3xl shadow-2xl max-w-3xl font-iransans mx-auto p-8"
+            className="bg-white rounded-3xl shadow-2xl max-w-3xl font-iransans mx-auto p-14 my-12"
             data-aos="fade-up"
             aria-live="polite"
         >

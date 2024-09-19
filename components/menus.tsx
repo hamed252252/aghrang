@@ -82,7 +82,7 @@ const Menus = () => {
                                         <Input
                                             type="search"
                                             placeholder=" 🔍جستجو کنید"
-                                            className="w-46 placeholder:text-black  placeholder:text-start  group-hover:placeholder:text-black"
+                                            className="w-46 placeholder:text-black group-hover:placeholder:text-white  placeholder:text-start  "
                                         ></Input>
                                         <Button
                                             type="submit"
