@@ -9,9 +9,9 @@ import { Separator } from "../ui/separator";
 const ExhibitionContentItem: React.FC<
     FavoriteExhibitionItemProps
 > = ({ src, date, title, link }) => {
-    const [ishoverd, setIsHoverd] = useState(false);
+    const [isHovered, setIsHoverd] = useState(false);
     return (
-        <div className="flex h-fit hover:shadow-md flex-col items-center justify-start shadow-sm my-1 rounded-sm p-2 font-iransans">
+        <div className="flex h-fit hover:shadow-md flex-col items-center justify-start  shadow-sm my-1 rounded-md p-2 font-iransans">
             <Link
                 href={link}
                 className="relative w-full h-64"
@@ -24,9 +24,9 @@ const ExhibitionContentItem: React.FC<
                     fill
                     className="object-cover w-full h-full hover:blur-[2px] transition-all ease-in-out duration-500"
                 />
-                {ishoverd && (
+                {isHovered && (
                     <>
-                        <MessageCircle className="absolute bottom-4 stroke-white left-[53%] " />
+                        <MessageCircle className="absolute bottom-4 stroke-white left-[50%] " />
                         <p className="absolute text-white left-[30%] bottom-4">
                             بدون نظر
                         </p>
