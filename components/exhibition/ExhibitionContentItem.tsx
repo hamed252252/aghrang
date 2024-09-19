@@ -26,8 +26,8 @@ const ExhibitionContentItem: React.FC<
                 />
                 {ishoverd && (
                     <>
-                        <MessageCircle className="absolute bottom-2 stroke-white left-[50%] " />
-                        <p className="absolute text-white left-[30%] bottom-2">
+                        <MessageCircle className="absolute bottom-4 stroke-white left-[53%] " />
+                        <p className="absolute text-white left-[30%] bottom-4">
                             بدون نظر
                         </p>
                     </>
@@ -39,7 +39,7 @@ const ExhibitionContentItem: React.FC<
             <p className="text-center text-gray-500">
                 {date}
             </p>
-            <Separator className="h-0.5 w-16 my-2" />
+            <Separator className="h-0.5 w-16 my-2 bg-green-400" />
         </div>
     );
 };
